@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html class="dark" lang="bn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gallery - Sarad Sangha</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@300;400;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="assets/js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+    <!-- Premium Image Loading Progress Bar -->
+    <div id="galleryProgressBar"
+        class="fixed top-0 left-0 w-full h-[4px] bg-white/5 z-[9999] transition-opacity duration-300 pointer-events-none opacity-0">
+        <div id="galleryProgressBarFill"
+            class="h-full bg-gradient-to-r from-secondary to-primary shadow-[0_0_12px_#ff6d00] transition-all duration-300 ease-out"
+            style="width: 0%;"></div>
+    </div>
+
+    <!-- TopNavBar -->
+    <header
+        class="docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/5">
+        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="about.html">About</a>
+                <a class="text-secondary border-b border-secondary pb-1 font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="gallery.html">Gallery</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="committee.html">Committee</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="menu-btn" class="md:hidden relative w-11 h-11 rounded-full border border-secondary/30 bg-secondary/10 hover:bg-secondary/20 backdrop-blur-md shadow-[0_0_15px_rgba(255,109,0,0.15)] flex items-center justify-center text-on-surface-variant hover:text-secondary hover:scale-105 active:scale-95 transition-all duration-300 z-30 group overflow-hidden" aria-label="Open menu">
+                    <span class="absolute inset-0 rounded-full border border-secondary/50 animate-ping opacity-20 group-hover:opacity-40 pointer-events-none"></span>
+                    <span class="material-symbols-outlined text-2xl relative z-10">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Header Section -->
+        <section class="pt-40 pb-20 px-6 md:px-12 bg-surface relative overflow-hidden">
+            <div
+                class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[100px] -translate-y-1/2 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none">
+            </div>
+            <div
+                class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none">
+            </div>
+            <div class="max-w-7xl mx-auto relative z-10 text-center">
+                <p class="font-label text-secondary uppercase tracking-[0.4em] mb-6 text-sm">Visual Journey</p>
+                <h1 class="font-headline text-5xl md:text-8xl font-black tracking-tighter text-on-surface mb-8">
+                    Our <span class="text-secondary">Heritage</span><br />In Pictures
+                </h1>
+                <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    A visual archive of 80 years of devotion, artistic excellence, and vibrant community celebrations at
+                    Byabattarhat Sarad Sangha.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid Section -->
+        <section class="py-24 px-6 md:px-12 bg-surface-container-lowest relative">
+            <div class="max-w-7xl mx-auto flex flex-col items-center relative z-10">
+
+                <!-- Premium Filter Bar -->
+                <div class="mb-20 sticky top-24 z-40">
+                    <div class="filter-container" id="filterContainer">
+                        <div class="sliding-pill" id="pill"></div>
+                        <button class="filter-btn active" onclick="filterGallery(this, 'blood')">Blood Donation</button>
+                        <button class="filter-btn" onclick="filterGallery(this, 'pujo')">Our Pujo Diary</button>
+                        <button class="filter-btn" onclick="filterGallery(this, 'golden-memories')">Our Golden
+                            Memories</button>
+                    </div>
+                </div>
+
+                <div class="gallery-grid w-full" id="galleryGrid">
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.19 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.20 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.20 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.20 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.21 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.21 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.21 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.22 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.22 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.25 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.25 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.25 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.28 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM (3).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.30 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.30 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.30 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.31 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.32 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.34 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.34 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.34 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.35 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.35 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.35 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.37 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.37 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.38 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.38 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.39 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.40 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.40 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.40 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.42 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.42 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.43 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.44 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (3).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (4).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (5).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM (3).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.47 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.47 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.47 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.48 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.48 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.48 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.49 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.49 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.49 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.50 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.50 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.50 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.51 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.51 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.52 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.53 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.53 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.53 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.54 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.55 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.55 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.56 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.56 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.56 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.58 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.58 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.59 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.59 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.59 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.00 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.02 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.02 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.03 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.03 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.03 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.04 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.04 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.05 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.05 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.05 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.1s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.06 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.2s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.06 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.3s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.06 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.4s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.07 PM (1).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.5s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.07 PM (2).jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+                    <div class="gallery-item" data-category="pujo" style="animation-delay: 0.6s">
+                        <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.07 PM.jpeg"
+                            alt="Pujo Diary" loading="lazy" />
+                    </div>
+
+
+                    <!-- Blood Donation Items -->
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.1s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.18.11 PM.jpeg"
+                            alt="Blood donation camp layout" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Lifesaving Donation Camp</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.2s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.18.11 PM (1).jpeg"
+                            alt="Volunteers helping donors" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Volunteer Support</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.3s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.18.12 PM.jpeg"
+                            alt="Donors registering for camp" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Donor Registration</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.4s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.18.39 PM.jpeg"
+                            alt="Donor donating blood" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Active Participation</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.5s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.18.39 PM (1).jpeg"
+                            alt="Donor at the camp" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Noble Contribution</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.6s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.18.39 PM (2).jpeg"
+                            alt="Medical officer assisting donor" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Care and Support</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.7s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.18.40 PM.jpeg"
+                            alt="Volunteer team at camp" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Serving Humanity</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.8s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.19.15 PM.jpeg"
+                            alt="Donor smiles during donation" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Voluntary Donor</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.9s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.19.16 PM.jpeg"
+                            alt="Camp organizers and donors" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Community Unity</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 1.0s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.19.16 PM (1).jpeg"
+                            alt="Young donor participating" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Inspirational Act</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="blood" style="animation-delay: 0.1s">
+                        <img src="assets/images/blood_donation/WhatsApp Image 2026-07-04 at 6.19.17 PM.jpeg"
+                            alt="Donor receiving appreciation" loading="lazy" />
+                        <div class="item-overlay">
+                            <div class="item-text">
+                                <h3 class="font-headline text-2xl text-on-surface">Appreciation & Honor</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Golden Memories Items -->
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/12.jpg.jpeg" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/14.jpg.jpeg" alt="Traditional dance performance"
+                            loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/2.jpg.jpeg" alt="Distributing food to community"
+                            loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/3.jpg.jpeg" alt="Artistic altar designs"
+                            loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/5.jpg.jpeg" alt="Musical performance" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/6.jpg.jpeg" alt="Future community goals blueprint"
+                            loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/7.jpg.jpeg" alt="Vibrant festive gathering"
+                            loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/9.jpg.jpeg" alt="Devotees gathering at temple"
+                            loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.33 AM.jpeg"
+                            alt="Sarad Sangha historic building" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.34 AM.jpeg"
+                            alt="Healthcare camp organized by club" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.34 AM (1).jpeg"
+                            alt="Members holding award certificate" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.34 AM (2).jpeg"
+                            alt="Club members meeting" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.35 AM.jpeg"
+                            alt="Traditional dance show" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.35 AM (1).jpeg"
+                            alt="Puja decorations" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.35 AM (2).jpeg"
+                            alt="Close-up of idol decorations" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.36 AM.jpeg"
+                            alt="Devotees walking in procession" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.37 AM.jpeg"
+                            alt="Vibrant community celebrations" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.37 AM (1).jpeg"
+                            alt="Priest doing prayer rituals" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.37 AM (2).jpeg"
+                            alt="Offering prayers" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.38 AM.jpeg"
+                            alt="Sarad Sangha annual ceremony" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.38 AM (1).jpeg"
+                            alt="Evening lamps ritual" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-04-27 at 8.46.39 AM.jpeg"
+                            alt="People celebrating together" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-07-04 at 6.25.28 PM.jpeg"
+                            alt="Distribution of essential goods" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-07-04 at 6.26.00 PM.jpeg"
+                            alt="Cultural art display" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-07-04 at 6.26.00 PM (1).jpeg"
+                            alt="Folk music program" loading="lazy" />
+
+                    </div>
+                    <div class="gallery-item hidden" data-category="golden-memories"
+                        style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                        <img src="assets/images/goldren_memory/WhatsApp Image 2026-07-04 at 6.26.00 PM (2).jpeg"
+                            alt="Volunteers gathering together" loading="lazy" />
+                        >
+                    </div>
+                </div>
+                <div class="gallery-item hidden" data-category="golden-memories"
+                    style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/goldren_memory/WhatsApp Image 2026-07-04 at 6.26.01 PM.jpeg"
+                        alt="Theater drama play" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="golden-memories"
+                    style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/goldren_memory/WhatsApp Image 2026-07-04 at 6.26.01 PM (1).jpeg"
+                        alt="Members receiving trophies" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.19 PM.jpeg"
+                        alt="Pandal Preparations" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.20 PM (1).jpeg"
+                        alt="Devotional Offerings" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.20 PM (2).jpeg"
+                        alt="Evening Arati" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.20 PM.jpeg"
+                        alt="Dhaki Performance" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.21 PM (1).jpeg"
+                        alt="Ritual Splendor" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.21 PM (2).jpeg"
+                        alt="Community Feast" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.21 PM.jpeg"
+                        alt="Decor & Illuminations" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.22 PM (1).jpeg"
+                        alt="Cultural Festivities" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.22 PM.jpeg"
+                        alt="Vibrant Celebrations" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.25 PM (1).jpeg"
+                        alt="Divine Presence" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.25 PM (2).jpeg"
+                        alt="Sindur Khela" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.25 PM.jpeg"
+                        alt="Immersion Procession" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.28 PM.jpeg" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM (1).jpeg"
+                        loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM (2).jpeg"
+                        loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM (3).jpeg"
+                        loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.29 PM.jpeg" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.30 PM (1).jpeg"
+                        loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.30 PM (2).jpeg"
+                        loading="lazy" />
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.30 PM.jpeg" loading="lazy" />
+
+                </div>
+                <div class="gallery-item hidden" data-category="pujo"
+                    style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                    <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.31 PM.jpeg" loading="lazy" />
+
+                </div>
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.32 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.34 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.34 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.34 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.35 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.35 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.35 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.37 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.37 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.38 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.38 PM.jpeg"
+                    alt="Devotional Offerings" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.39 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.40 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.40 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.40 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.42 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.42 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.43 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.44 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (3).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (4).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM (5).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.45 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM (3).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.46 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.47 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            </div>
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.47 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.47 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.48 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.48 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.48 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.49 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.49 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.49 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.50 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.50 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.50 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.51 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.51 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.52 PM.jpeg" alt="Ritual Splendor"
+                    loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.53 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.53 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.53 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.54 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.55 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.55 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.56 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.56 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.56 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.58 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.58 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.59 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.59 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.27.59 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.00 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.02 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.02 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.03 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.03 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.03 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.04 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.7s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.04 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.8s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.05 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.9s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.05 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 1.0s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.05 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.1s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.06 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.2s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.06 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.3s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.06 PM.jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.4s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.07 PM (1).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.5s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.07 PM (2).jpeg" loading="lazy" />
+
+            </div>
+            <div class="gallery-item hidden" data-category="pujo"
+                style="animation-delay: 0.6s; opacity: 0; transform: scale(0.9);">
+                <img src="assets/images/pujo_diary/WhatsApp Image 2026-07-04 at 12.28.07 PM.jpeg" loading="lazy" />
+
+            </div>
+            </div>
+            </div>
+
+            <script src="assets/js/gallery.js" defer></script>
+
+            <div class="mt-20 flex justify-center">
+                <button id="loadMoreBtn"
+                    class="border border-white/20 hover:border-secondary hover:text-secondary px-8 py-4 font-label font-bold uppercase tracking-[0.2em] text-on-surface text-sm transition-all duration-300 rounded-full flex items-center gap-3">
+                    <span class="material-symbols-outlined">refresh</span> Load More Memories
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="w-full py-12 px-8 border-t border-white/5 bg-surface-container-lowest dark:bg-surface-container-lowest mt-12">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div
+                class="flex flex-wrap justify-center gap-8 font-label text-body-sm tracking-wide text-on-surface-variant">
+                <a class="hover:text-secondary transition-all duration-300" href="services/emergency_services.html">Emergency Services</a>
+                <a class="hover:text-secondary transition-all duration-300" href="legal/privacy_policy.html">Privacy Policy</a>
+                <a class="hover:text-secondary transition-all duration-300" href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="font-body text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/40">
+                © 2024 Byabattarhat Sarad Sangha. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- Premium Lightbox Modal -->
+    <div id="lightboxModal"
+        class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/90 backdrop-blur-[20px] transition-all duration-300 opacity-0">
+        <!-- Close Button -->
+        <button id="lightboxClose"
+            class="absolute top-4 right-4 md:top-6 md:right-6 text-on-surface-variant hover:text-primary transition-colors duration-300 z-10 bg-white/5 p-2.5 md:p-3 rounded-full hover:bg-white/10 flex items-center justify-center"
+            aria-label="Close lightbox">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <!-- Navigation Buttons -->
+        <button id="lightboxPrev"
+            class="absolute left-2 md:left-6 text-on-surface-variant hover:text-primary transition-colors duration-300 z-10 bg-white/5 p-2.5 md:p-4 rounded-full hover:bg-white/10 flex items-center justify-center"
+            aria-label="Previous image">
+            <span class="material-symbols-outlined text-4xl">chevron_left</span>
+        </button>
+        <button id="lightboxNext"
+            class="absolute right-2 md:right-6 text-on-surface-variant hover:text-primary transition-colors duration-300 z-10 bg-white/5 p-2.5 md:p-4 rounded-full hover:bg-white/10 flex items-center justify-center"
+            aria-label="Next image">
+            <span class="material-symbols-outlined text-4xl">chevron_right</span>
+        </button>
+
+        <!-- Image & Caption Container -->
+        <div class="max-w-5xl w-full px-6 flex flex-col items-center gap-4 relative">
+            <img id="lightboxImage" src="" alt=""
+                class="max-h-[75vh] max-w-full object-contain rounded-lg shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] transform scale-95 transition-all duration-300 ease-out" />
+            <div id="lightboxCaption" class="text-center mt-4 max-w-2xl">
+                <span id="lightboxCategory" class="category-tag mb-2 inline-block">Category</span>
+                <h3 id="lightboxTitle" class="font-headline text-2xl md:text-3xl text-on-surface font-black">Title</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/lightbox.js" defer></script>
+</body>
+
+</html>

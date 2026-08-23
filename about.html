@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html class="dark" lang="bn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us - Sarad Sangha</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@300;400;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="assets/js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+    <!-- TopNavBar -->
+    <header
+        class="docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/5">
+        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-[50%] overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="relative py-1 text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
+                    href="index.html">Home</a>
+                <a class="relative py-1 text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-secondary"
+                    href="about.html">About</a>
+                <a class="relative py-1 text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
+                    href="gallery.html">Gallery</a>
+                <a class="relative py-1 text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-secondary hover:after:w-full after:transition-all after:duration-300"
+                    href="committee.html">Committee</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="menu-btn" class="md:hidden relative w-11 h-11 rounded-full border border-secondary/30 bg-secondary/10 hover:bg-secondary/20 backdrop-blur-md shadow-[0_0_15px_rgba(255,109,0,0.15)] flex items-center justify-center text-on-surface-variant hover:text-secondary hover:scale-105 active:scale-95 transition-all duration-300 z-30 group overflow-hidden" aria-label="Open menu">
+                    <span class="absolute inset-0 rounded-full border border-secondary/50 animate-ping opacity-20 group-hover:opacity-40 pointer-events-none"></span>
+                    <span class="material-symbols-outlined text-2xl relative z-10">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Hero -->
+        <section class="pt-28 md:pt-36 pb-20 px-6 md:px-12 bg-surface relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover opacity-[0.45] grayscale"
+                    data-alt="Cinematic low angle shot of a traditional Durga Puja idol with dramatic lighting and deep shadows in an ornate pandal"
+                    src="assets/images/about/about_bg.jpeg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/80 to-transparent"></div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto relative z-10 text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="font-label text-secondary uppercase tracking-[0.4em] mb-6 text-sm">Since 1948</p>
+                    <h1
+                        class="font-headline text-5xl md:text-7xl font-black tracking-tighter text-on-surface mb-8 leading-none">
+                        The Story of<span class="block text-secondary text-[1.1em] mt-4">Our 'Poribar'</span>
+                    </h1>
+                    <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed">
+                        four decades, Byabattarhat Sarad Sangha has stood as a beacon of cultural heritage,
+                        community service, and spiritual celebration in the heart of Purba Medinipur.
+                    </p>
+                </div>
+                <div class="relative order-first md:order-last flex justify-center md:-mt-12">
+                    <div
+                        class="relative w-[280px] h-[280px] min-[380px]:w-[340px] min-[380px]:h-[340px] sm:w-[440px] sm:h-[440px] md:w-[560px] md:h-[560px] group">
+                        <!-- Inner glow ring -->
+                        <div
+                            class="absolute inset-0 rounded-3xl border border-primary/20 scale-102 group-hover:scale-105 group-hover:border-primary transition-all duration-700">
+                        </div>
+                        <!-- Main Image Container -->
+                        <div
+                            class="w-full h-full rounded-3xl p-2 bg-surface-container-high/50 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden relative z-10 transition-transform duration-700 group-hover:scale-[1.02]">
+                            <img class="w-full h-full object-cover rounded-3xl grayscale hover:grayscale-0 transition-all duration-700"
+                                src="assets/images/about/WhatsApp Image 2026-07-04 at hh11.53.15 PM.jpeg"
+                                alt="Durga Idol" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Speakers Section -->
+        <section class="py-24 px-6 md:px-12 bg-surface relative overflow-hidden border-t border-white/5">
+            <!-- Background Ambient Glows -->
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-20">
+                    <p
+                        class="font-label text-secondary uppercase tracking-[0.35em] text-xs font-bold mb-3 animate-[pulse_3s_ease-in-out_infinite]">
+                        Voices of Inspiration</p>
+                    <h2
+                        class="font-headline text-5xl md:text-6xl font-black tracking-tight text-on-surface uppercase relative inline-block">
+                        Our Speakers</h2>
+                    <div
+                        class="w-24 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto mt-6">
+                    </div>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Speaker 1 -->
+                    <div
+                        class="bg-surface-container-high/35 backdrop-blur-xl border border-white/5 hover:border-secondary/20 p-8 md:p-10 rounded-[2rem] hover:shadow-[0_25px_60px_rgba(255,109,0,0.06)] hover:-translate-y-1 transition-all duration-500 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 relative overflow-hidden group shadow-lg">
+                        <!-- Background Double Quote Icon -->
+                        <span
+                            class="absolute top-2 right-8 text-[12rem] font-serif leading-none text-secondary/[0.02] group-hover:text-secondary/5 group-hover:translate-x-2 transition-all duration-700 pointer-events-none select-none">“</span>
+
+                        <!-- Content Area -->
+                        <div class="flex-1 text-center md:text-left relative z-10 w-full">
+                            <p
+                                class="text-on-surface-variant/90 text-lg md:text-xl font-body leading-relaxed italic mb-6">
+                                "Sharad Sangh is not just a name or an organization. It is an emotion for us. Every part
+                                of it is filled with devotion for the Maa Durga."
+                            </p>
+                            <!-- Animated Line Divider -->
+                            <!-- <div class="w-8 h-[2px] bg-secondary/30 mb-4 group-hover:w-16 transition-all duration-500">
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <!-- Speaker 2 -->
+                    <div
+                        class="bg-surface-container-high/35 backdrop-blur-xl border border-white/5 hover:border-secondary/20 p-8 md:p-10 rounded-[2rem] hover:shadow-[0_25px_60px_rgba(255,109,0,0.06)] hover:-translate-y-1 transition-all duration-500 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 relative overflow-hidden group shadow-lg">
+                        <!-- Background Double Quote Icon -->
+                        <span
+                            class="absolute top-2 right-8 text-[12rem] font-serif leading-none text-secondary/[0.02] group-hover:text-secondary/5 group-hover:translate-x-2 transition-all duration-700 pointer-events-none select-none">“</span>
+
+                        <!-- Avatar Container with Double Animating Rings -->
+                        <div class="relative w-28 h-28 md:w-32 md:h-32 flex-shrink-0">
+                            <!-- Inner glow ring -->
+                            <div
+                                class="absolute inset-0 rounded-2xl border border-secondary/15 scale-105 group-hover:scale-110 group-hover:border-secondary/40 transition-all duration-500">
+                            </div>
+
+                            <!-- Image Frame -->
+                            <div
+                                class="w-full h-full rounded-2xl bg-surface-container-highest overflow-hidden p-1.5 border border-white/10 relative z-10 shadow-inner">
+                                <img src="assets/images/member/Sukumar bera.jpeg" alt="Sukumar Bera"
+                                    class="w-full h-full object-cover rounded-2xl grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                            </div>
+                        </div>
+
+                        <!-- Content Area -->
+                        <div class="flex-1 text-center md:text-left relative z-10">
+                            <p
+                                class="text-on-surface-variant/90 text-lg md:text-xl font-body leading-relaxed italic mb-6">
+                                "Our annual Durga Puja is not just a festival; it is a sacred bond that unites hearts
+                                and souls. I am immensely proud of our team's relentless effort in making our Sangha a
+                                warm, welcoming home for all devotees and a center of local cultural excellence."
+                            </p>
+                            <!-- Animated Line Divider -->
+                            <div
+                                class="w-8 h-[2px] bg-secondary/30 mb-4 mx-auto md:mx-0 group-hover:w-16 transition-all duration-500">
+                            </div>
+                            <div>
+                                <h4
+                                    class="font-headline text-xl md:text-2xl font-bold tracking-tight text-on-surface group-hover:text-secondary transition-colors duration-300">
+                                    Sukumar Bera</h4>
+                                <p
+                                    class="font-label text-secondary uppercase tracking-[0.25em] text-[10px] font-extrabold mt-1.5">
+                                    President</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Speaker 3 -->
+                    <div
+                        class="bg-surface-container-high/35 backdrop-blur-xl border border-white/5 hover:border-secondary/20 p-8 md:p-10 rounded-[2rem] hover:shadow-[0_25px_60px_rgba(255,109,0,0.06)] hover:-translate-y-1 transition-all duration-500 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 relative overflow-hidden group shadow-lg">
+                        <!-- Background Double Quote Icon -->
+                        <span
+                            class="absolute top-2 right-8 text-[12rem] font-serif leading-none text-secondary/[0.02] group-hover:text-secondary/5 group-hover:translate-x-2 transition-all duration-700 pointer-events-none select-none">“</span>
+
+                        <!-- Avatar Container with Double Animating Rings -->
+                        <div class="relative w-28 h-28 md:w-32 md:h-32 flex-shrink-0">
+                            <!-- Inner glow ring -->
+                            <div
+                                class="absolute inset-0 rounded-2xl border border-secondary/15 scale-105 group-hover:scale-110 group-hover:border-secondary/40 transition-all duration-500">
+                            </div>
+
+                            <!-- Image Frame -->
+                            <div
+                                class="w-full h-full rounded-2xl bg-surface-container-highest overflow-hidden p-1.5 border border-white/10 relative z-10 shadow-inner">
+                                <img src="assets/images/member/Sankha bera.jpeg" alt="Sankha Churd Bera"
+                                    class="w-full h-full object-cover rounded-2xl grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                            </div>
+                        </div>
+
+                        <!-- Content Area -->
+                        <div class="flex-1 text-center md:text-left relative z-10">
+                            <p
+                                class="text-on-surface-variant/90 text-lg md:text-xl font-body leading-relaxed italic mb-6">
+                                "We believe that devotion manifests beautifully in serving humanity. Our emergency
+                                health service, blood donation camps, and active social outreach are testimonies to this
+                                spirit. Together, we are building a stronger and more compassionate Poribar."
+                            </p>
+                            <!-- Animated Line Divider -->
+                            <div
+                                class="w-8 h-[2px] bg-secondary/30 mb-4 mx-auto md:mx-0 group-hover:w-16 transition-all duration-500">
+                            </div>
+                            <div>
+                                <h4
+                                    class="font-headline text-xl md:text-2xl font-bold tracking-tight text-on-surface group-hover:text-secondary transition-colors duration-300">
+                                    Sankha Churd Bera</h4>
+                                <p
+                                    class="font-label text-secondary uppercase tracking-[0.25em] text-[10px] font-extrabold mt-1.5">
+                                    Secretary</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Values Section -->
+        <section class="py-24 px-6 md:px-12 bg-surface-container-lowest relative overflow-hidden">
+            <div class="heritage-foil right-0 top-0 opacity-5">S</div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div
+                        class="bg-surface-container-high p-10 rounded-xl border border-white/5 hover:border-secondary/30 transition-colors duration-500">
+                        <span class="material-symbols-outlined text-secondary text-5xl mb-6">temple_hindu</span>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight mb-4 text-on-surface">Tradition</h3>
+                        <p class="text-on-surface-variant leading-relaxed">We honor the ancient traditions of Durga
+                            Puja, maintaining the authenticity and spiritual sanctity of the rituals while embracing
+                            thousands of devotees every year.</p>
+                    </div>
+                    <!-- Value 2 -->
+                    <div
+                        class="bg-surface-container-high p-10 rounded-xl border border-white/5 hover:border-secondary/30 transition-colors duration-500">
+                        <span class="material-symbols-outlined text-secondary text-5xl mb-6">groups</span>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight mb-4 text-on-surface">Community</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Our Sangha is a family. Through annual
+                            gatherings, cultural programs, and social events, we build strong, lasting bonds among all
+                            our members and visitors.</p>
+                    </div>
+                    <!-- Value 3 -->
+                    <div
+                        class="bg-surface-container-high p-10 rounded-xl border border-white/5 hover:border-secondary/30 transition-colors duration-500">
+                        <span class="material-symbols-outlined text-secondary text-5xl mb-6">favorite</span>
+                        <h3 class="font-headline text-3xl font-bold tracking-tight mb-4 text-on-surface">Service</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Beyond festivities, we are dedicated to
+                            social welfare. From blood donation camps to free emergency ambulances, service to humanity
+                            is our core principle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our History Timeline (Stylized) -->
+        <section class="py-32 px-6 md:px-12 bg-surface">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="font-headline text-5xl md:text-6xl tracking-tighter mb-6">80 Years of Devotion</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+
+            <div class="max-w-5xl mx-auto space-y-16 md:space-y-24 relative">
+                <!-- Line down the middle (Desktop) & Left edge (Mobile) -->
+                <div
+                    class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 md:bg-outline-variant z-0">
+                </div>
+                <!-- Event 1 -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-right mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">1986</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Journey Begins</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">Our historic journey begins. With great
+                            devotion, we organize our first universal Durga Puja festival.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">1986</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div
+                    class="flex flex-col md:flex-row-reverse items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-left mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">1992</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Anna Seva Milestone</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">This year is a milestone in our Anna
+                            Seva. Around 4,400 people participated in the Anna Seva for Mother's Bhog.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">1992</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-right mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">1995</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Official Permission</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">We, along with a few clubs in the
+                            undivided Midnapore district, received permission from the Midnapore district administration
+                            to organize Durga Puja.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">1995</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 4 -->
+                <div
+                    class="flex flex-col md:flex-row-reverse items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-left mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">1996</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Concrete Building</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">This year the club's own concrete
+                            building was built.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">1996</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 5 -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-right mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">1999</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Official Registration</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">We are registered as a social
+                            organization under the Society Act, Government of West Bengal.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">1999</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 6 -->
+                <div
+                    class="flex flex-col md:flex-row-reverse items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-left mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">2004</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Guide Map Inclusion</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">For the first time, our Durga Puja has
+                            been included in the Puja Guide Map published by Purba Medinipur District Police.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">2004</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 7 -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-right mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">2009</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Notable Members</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">The then MP from Tamluk, currently the
+                            Honorable Chief Minister of West Bengal, <strong><span class="font-headline font-black text-on-surface">Shri Suvendu Adhikari</span></strong>, accepted the life membership
+                            of our organization.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">2009</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 8 -->
+                <div
+                    class="flex flex-col md:flex-row-reverse items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-left mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">2012</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Ambulance Service Starts</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">Our ambulance service was started on the
+                            recommendation of the honorable MP of Tamluk and a life member of our organization, <strong><span class="font-headline font-black text-on-surface">Shri
+                            Suvendu Adhikari</span></strong>, with the financial support of MCPI Haldia (CRS Fund).</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">2012</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 9 -->
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-right mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">2016</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Parir Desh Theme</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">Our first themed pandal made of cotton -
+                            'Parir Desh'. The biggest crowd ever gathered at our pandal. The puja was inaugurated by the
+                            Honorable District Magistrate and Superintendent of Police. Purba Medinipur.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">2016</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 10 -->
+                <div
+                    class="flex flex-col md:flex-row-reverse items-start md:items-center justify-between group relative pl-16 md:pl-0">
+                    <!-- Mobile Dot -->
+                    <div
+                        class="absolute left-[1.125rem] md:hidden top-3 w-3 h-3 rounded-full bg-secondary z-10 shadow-[0_0_12px_rgba(255,109,0,0.9)] animate-[pulse_2s_ease-in-out_infinite] border-2 border-secondary/50">
+                    </div>
+
+                    <div class="w-full md:w-5/12 md:text-left mb-6 md:mb-0 px-0 md:px-4">
+                        <h3 class="font-headline text-3xl md:text-4xl text-orange-500 mb-1 md:mb-2">2020</h3>
+                        <h4 class="font-headline text-xl md:text-2xl mb-2 md:mb-4">Covid-19 Response</h4>
+                        <p class="text-on-surface-variant text-sm md:text-base">A new challenge was before us, we jumped
+                            into human service. We distributed adequate quantities of masks and sanitizers. We even
+                            distributed some PPE kits.</p>
+                    </div>
+
+                    <!-- Desktop Dot -->
+                    <div class="hidden md:flex w-2/12 justify-center relative">
+                        <div
+                            class="w-4 h-4 rounded-full bg-surface border-2 border-secondary z-10 group-hover:bg-secondary group-hover:scale-150 transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block w-full md:w-5/12 px-0 md:px-4">
+                        <div
+                            class="aspect-video bg-surface-container-highest rounded-lg overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-secondary/30 transition-all duration-500 shadow-[inset_0_4px_20px_rgba(0,0,0,0.5)]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/40 group-hover:opacity-100 opacity-80 group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <span
+                                class="font-headline text-6xl md:text-8xl font-black text-secondary/60 group-hover:text-secondary/100 transition-all duration-700 group-hover:scale-110 relative z-10 drop-shadow-xl">2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="w-full py-12 px-8 border-t border-white/5 bg-surface-container-lowest dark:bg-surface-container-lowest">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-[50%] overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div
+                class="flex flex-wrap justify-center gap-8 font-label text-body-sm tracking-wide text-on-surface-variant">
+                <a class="active:text-secondary md:hover:text-secondary transition-colors duration-300"
+                    href="services/emergency_services.html">Emergency Services</a>
+                <a class="active:text-secondary md:hover:text-secondary transition-colors duration-300"
+                    href="legal/privacy_policy.html">Privacy Policy</a>
+                <a class="active:text-secondary md:hover:text-secondary transition-colors duration-300"
+                    href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="font-body text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/40">
+                © 2024 Byabattarhat Sarad Sangha. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

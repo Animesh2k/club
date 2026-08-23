@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="dark" lang="bn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Committee - Sarad Sangha</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@300;400;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="assets/js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+    <!-- TopNavBar -->
+    <header
+        class="docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/5">
+        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-4 md:p-8">
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="about.html">About</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="gallery.html">Gallery</a>
+                <a class="text-secondary border-b border-secondary pb-1 font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="committee.html">Committee</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="menu-btn" class="md:hidden relative w-11 h-11 rounded-full border border-secondary/30 bg-secondary/10 hover:bg-secondary/20 backdrop-blur-md shadow-[0_0_15px_rgba(255,109,0,0.15)] flex items-center justify-center text-on-surface-variant hover:text-secondary hover:scale-105 active:scale-95 transition-all duration-300 z-30 group overflow-hidden" aria-label="Open menu">
+                    <span class="absolute inset-0 rounded-full border border-secondary/50 animate-ping opacity-20 group-hover:opacity-40 pointer-events-none"></span>
+                    <span class="material-symbols-outlined text-2xl relative z-10">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-40 pb-20 px-6 md:px-12 bg-surface relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[100px] -translate-y-1/2 pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none">
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto relative z-10 text-center">
+                <p class="font-label text-secondary uppercase tracking-[0.4em] mb-6 text-sm">Leadership</p>
+                <h1
+                    class="font-headline text-[2.5rem] min-[390px]:text-5xl md:text-8xl font-black tracking-tighter text-on-surface mb-8 whitespace-nowrap">
+                    The <span class="text-secondary">Committee</span>
+                </h1>
+                <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    Meet the dedicated individuals who volunteer their time and energy to preserve our traditions and
+                    serve the community.
+                </p>
+            </div>
+        </section>
+
+        <!-- Executive Board Section -->
+        <section class="py-24 px-6 md:px-12 bg-surface-container-lowest relative">
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-headline text-2xl min-[400px]:text-xl min-[400px]:text-2xl md:text-3xl md:text-4xl tracking-tighter uppercase">
+                        Executive Committee</h2>
+                    <div class="w-12 h-[1px] bg-secondary mx-auto mt-6"></div>
+                </div>
+
+                <div class="max-w-6xl mx-auto space-y-16">
+                    <!-- Tier 1: Chief Advisor -->
+                    <div class="flex justify-center">
+                        <div class="w-full md:w-[680px] bg-surface-container-high p-6 md:p-12 rounded-3xl border border-white/5 hover:border-secondary/30 transition-all duration-700 relative overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)] reveal-member"
+                            style="animation-delay: 0.1s">
+                            <div
+                                class="card-foil top-[-3rem] right-0 opacity-[0.03] group-hover:opacity-10 transition-opacity">
+                                A</div>
+                            <div class="relative z-10 flex flex-col items-center text-center">
+                                <div
+                                    class="w-40 h-40 rounded-full mb-8 p-1.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-2xl">
+                                    <div
+                                        class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden border-4 border-surface">
+                                        <img src="assets/images/member/Suvendu Adhikari.jpeg" alt="Suvendu Adhikari"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-2xl min-[400px]:text-xl min-[400px]:text-2xl md:text-3xl md:text-4xl font-black tracking-tight text-on-surface mb-3">
+                                    Suvendu Adhikari</h3>
+                                <p class="font-label text-secondary uppercase tracking-[0.3em] text-sm font-bold">Chief
+                                    Advisor &amp; Lifetime Member</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 2: President -->
+                    <div class="flex justify-center">
+                        <div class="w-full md:w-[580px] bg-surface-container-high p-5 md:p-10 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group shadow-xl reveal-member"
+                            style="animation-delay: 0.2s">
+                            <div
+                                class="card-foil top-[-2rem] right-0 opacity-[0.03] group-hover:opacity-10 transition-opacity text-secondary">
+                                P</div>
+                            <div class="relative z-10 flex flex-col items-center text-center">
+                                <div
+                                    class="w-32 h-32 rounded-full mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-xl">
+                                    <div
+                                        class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Sukumar bera.jpeg" alt="Sukumar Bera"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-xl min-[400px]:text-2xl md:text-3xl font-bold tracking-tight text-on-surface mb-2">
+                                    Sukumar
+                                    Bera</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-xs font-bold">
+                                    President</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 3: Vice Presidents -->
+                    <div class="flex flex-wrap justify-center gap-4 md:gap-8 max-w-6xl mx-auto">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[420px] bg-surface-container-high p-3 md:p-8 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group shadow-lg flex flex-col items-center text-center reveal-member"
+                            style="animation-delay: 0.3s">
+                            <div
+                                class="card-foil bottom-[-2rem] left-0 opacity-[0.02] group-hover:opacity-10 transition-opacity">
+                                VP</div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-20 h-20 md:w-32 md:h-32 rounded-2xl mb-4 md:mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-lg mx-auto overflow-hidden">
+                                    <div
+                                        class="w-full h-full rounded-2xl bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Amit_Das.png " alt="Amit Das"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-base md:text-2xl font-bold tracking-tight text-on-surface mb-2">
+                                    Amit
+                                    Das</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-[10px] font-bold">
+                                    Vice-President</p>
+                            </div>
+                        </div>
+                        <div class="w-[calc(50%-0.5rem)] md:w-[420px] bg-surface-container-high p-3 md:p-8 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group shadow-lg flex flex-col items-center text-center reveal-member"
+                            style="animation-delay: 0.4s">
+                            <div
+                                class="card-foil bottom-[-2rem] left-0 opacity-[0.02] group-hover:opacity-10 transition-opacity">
+                                VP</div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-20 h-20 md:w-32 md:h-32 rounded-2xl mb-4 md:mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-lg mx-auto overflow-hidden">
+                                    <div
+                                        class="w-full h-full rounded-2xl bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Asim das.jpeg" alt="Ashim Das"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-base md:text-2xl font-bold tracking-tight text-on-surface mb-2">
+                                    Ashim
+                                    Das</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-[10px] font-bold">
+                                    Vice-President</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 4: Secretary -->
+                    <div class="flex justify-center">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[420px] bg-surface-container-high p-3 md:p-8 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group shadow-xl flex flex-col items-center text-center reveal-member"
+                            style="animation-delay: 0.5s">
+                            <div
+                                class="card-foil bottom-[-2rem] right-0 opacity-[0.03] group-hover:opacity-10 transition-opacity text-secondary">
+                                S</div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mb-4 md:mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-lg mx-auto overflow-hidden">
+                                    <div
+                                        class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Sankha bera.jpeg" alt="Sankha Churd Bera"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-base md:text-2xl font-bold tracking-tight text-on-surface mb-2">
+                                    Sankha
+                                    Churd Bera</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-[10px] font-bold">
+                                    Secretary</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 5: Asst. Secretary -->
+                    <div class="flex justify-center">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[420px] bg-surface-container-high p-3 md:p-8 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group shadow-lg flex flex-col items-center text-center reveal-member"
+                            style="animation-delay: 0.6s">
+                            <div
+                                class="card-foil bottom-[-2rem] right-0 opacity-[0.02] group-hover:opacity-10 transition-opacity">
+                                AS</div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mb-4 md:mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-lg mx-auto overflow-hidden">
+                                    <div
+                                        class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Sandip metia.jpeg" alt="Sandip Metiya"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-base md:text-2xl font-bold tracking-tight text-on-surface mb-2">
+                                    Sandip
+                                    Metiya</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-[10px] font-bold">
+                                    Asst.
+                                    Secretary</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 6: Operations (Treasurer, Cashier, IT) -->
+                    <div class="flex flex-wrap justify-center gap-4 md:gap-8 max-w-7xl mx-auto">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[420px] bg-surface-container-high p-3 md:p-8 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group flex flex-col items-center text-center shadow-lg reveal-member"
+                            style="animation-delay: 0.7s">
+                            <div
+                                class="card-foil bottom-[-2rem] right-0 opacity-[0.03] group-hover:opacity-10 transition-opacity">
+                                T</div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mb-4 md:mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-lg mx-auto overflow-hidden">
+                                    <div
+                                        class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Chandan dinda.jpeg" alt="Chandan Kr. Dinda"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-base md:text-2xl font-bold tracking-tight text-on-surface mb-2">
+                                    Chandan
+                                    Kr. Dinda</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-[10px] font-bold">
+                                    Treasurer</p>
+                            </div>
+                        </div>
+                        <div class="w-[calc(50%-0.5rem)] md:w-[420px] bg-surface-container-high p-3 md:p-8 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group flex flex-col items-center text-center shadow-lg reveal-member"
+                            style="animation-delay: 0.8s">
+                            <div
+                                class="card-foil bottom-[-2rem] right-0 opacity-[0.03] group-hover:opacity-10 transition-opacity">
+                                C</div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mb-4 md:mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-lg mx-auto overflow-hidden">
+                                    <div
+                                        class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Ram pada.jpeg" alt="Ramakrishna Adhikari"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-base md:text-2xl font-bold tracking-tight text-on-surface mb-2 text-center">
+                                    Ramakrishna Adhikari</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-[10px] font-bold">
+                                    Cashier</p>
+                            </div>
+                        </div>
+                        <div class="w-[calc(50%-0.5rem)] md:w-[420px] bg-surface-container-high p-3 md:p-8 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden group flex flex-col items-center text-center shadow-lg reveal-member"
+                            style="animation-delay: 0.9s">
+                            <div
+                                class="card-foil bottom-[-2rem] right-0 opacity-[0.03] group-hover:opacity-10 transition-opacity">
+                                I</div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mb-4 md:mb-6 p-1 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-lg mx-auto overflow-hidden">
+                                    <div
+                                        class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden border-2 border-surface">
+                                        <img src="assets/images/member/Biman Hazra.jpeg" alt="Biman Hazra"
+                                            class="w-full h-full object-cover member-img" />
+                                    </div>
+                                </div>
+                                <h3
+                                    class="font-headline text-base md:text-2xl font-bold tracking-tight text-on-surface mb-2">
+                                    Biman
+                                    Hazra</h3>
+                                <p class="font-label text-secondary uppercase tracking-widest text-[10px] font-bold">
+                                    Art Coordinator &amp; It In Charge
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Council Members Section -->
+        <section class="py-24 px-6 md:px-12 bg-surface relative">
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-headline text-2xl min-[400px]:text-xl min-[400px]:text-2xl md:text-3xl md:text-4xl tracking-tighter uppercase">
+                        Council Members</h2>
+                    <div class="w-12 h-[1px] bg-secondary mx-auto mt-6"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.1s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Dipnarayan ray.jpeg" alt="Dipnarayan Roy"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Dipnarayan Roy</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.2s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Tapan maity.jpeg" alt="Tapan Maity"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Tapan Maity</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.3s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Uttam sahoo.jpeg" alt="Uttam Sahoo"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Uttam Sahoo</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.4s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/swap_da.jpeg" alt="Swarup Pattanayak"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Swarup Pattanayak</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.5s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Susanta ghara copy.png" alt="Susanta Ghara"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Susanta Ghara</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.6s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Mahitosh majhi.jpeg" alt="Mahitosh Maji"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Mahitosh Maji</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.7s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Sandip chakraborty.jpeg" alt="Sandip Chakrabartty"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Sandip Chakrabartty</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.8s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Debaprasad mandal.jpeg" alt="Debaprasad Mondal"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Debaprasad Mondal</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl border border-white/5 hover:border-white/10 transition-colors flex items-center gap-5 group reveal-member"
+                        style="animation-delay: 0.9s">
+                        <div
+                            class="w-12 h-12 rounded-full p-0.5 velvet-gradient group-hover:scale-110 transition-transform duration-700 shadow-md flex-shrink-0 overflow-hidden">
+                            <div
+                                class="w-full h-full rounded-full bg-surface-container-high overflow-hidden border border-surface">
+                                <img src="assets/images/member/Dibaduti maiti.jpeg" alt="Debadyuti Maity"
+                                    class="w-full h-full object-cover member-img" />
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-headline text-lg text-on-surface mb-0.5">Debadyuti Maity</h4>
+                            <p class="font-label text-[10px] text-secondary uppercase tracking-widest">Council Member
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="w-full py-12 px-8 border-t border-white/5 bg-surface-container-lowest dark:bg-surface-container-lowest">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:p-8 w-full max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div
+                class="flex flex-wrap justify-center gap-4 md:p-8 font-label text-body-sm tracking-wide text-on-surface-variant">
+                <a class="hover:text-secondary transition-all duration-300"
+                    href="services/emergency_services.html">Emergency
+                    Services</a>
+                <a class="hover:text-secondary transition-all duration-300" href="legal/privacy_policy.html">Privacy
+                    Policy</a>
+                <a class="hover:text-secondary transition-all duration-300" href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="font-body text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/40">
+                © 2024 Byabattarhat Sarad Sangha. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

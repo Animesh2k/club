@@ -1,0 +1,885 @@
+html,
+body {
+    width: 100%;
+    position: relative;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.velvet-gradient {
+    background: linear-gradient(135deg, #ffb3ac 0%, #8e1b1b 100%);
+}
+
+.item-overlay {
+    display: none !important;
+}
+
+.heritage-foil {
+    position: absolute;
+    font-size: 40rem;
+    line-height: 1;
+    font-family: 'Epilogue', sans-serif;
+    color: rgba(255, 255, 255, 0.02);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Gallery page custom styles */
+.gallery-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
+.gallery-item {
+    position: relative;
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease-in-out;
+    filter: grayscale(80%) contrast(1.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%) contrast(1);
+}
+
+.gallery-item-tall {
+    grid-row: span 2;
+}
+
+.gallery-item-wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .gallery-item-wide {
+        grid-column: span 1;
+    }
+}
+
+.item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(19, 19, 19, 0.9) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-text {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s ease 0.1s, opacity 0.5s ease 0.1s;
+}
+
+.gallery-item:hover .item-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Premium Filter System */
+.filter-container {
+    position: relative;
+    background: rgba(42, 42, 42, 0.5);
+    backdrop-filter: blur(16px);
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    overflow: visible;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.filter-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.filter-btn {
+    position: relative;
+    padding: 0.75rem 1.75rem;
+    border-radius: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    color: #ffffff;
+}
+
+.filter-btn:hover:not(.active) {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sliding-pill {
+    position: absolute;
+
+    left: 0.5rem;
+    background: #ff6d00;
+    border-radius: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+    box-shadow: 0 4px 15px rgba(255, 109, 0, 0.4);
+}
+
+/* Staggered Reveal Animation */
+@keyframes revealItem {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.gallery-item {
+    animation: revealItem 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+/* Category Tag Style */
+.category-tag {
+    background: rgba(255, 109, 0, 0.15);
+    color: #ff6d00;
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 109, 0, 0.2);
+}
+
+.gallery-item.filtering-out {
+    opacity: 0 !important;
+    transform: scale(0.9) !important;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.gallery-item.hidden {
+    display: none !important;
+}
+
+/* Gallery Item Shimmer Skeleton & Loading Transitions */
+.gallery-item.img-loading {
+    min-height: 220px;
+    background: rgba(28, 27, 27, 0.6);
+    position: relative;
+    border: 1px solid rgba(255, 109, 0, 0.05);
+}
+
+.gallery-item.img-loading::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(28, 27, 27, 0) 0%,
+            rgba(255, 109, 0, 0.08) 50%,
+            rgba(28, 27, 27, 0) 100%);
+    background-size: 200% 100%;
+    animation: galleryShimmer 1.5s infinite linear;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes galleryShimmer {
+    0% {
+        background-position: -150% 0;
+    }
+
+    100% {
+        background-position: 150% 0;
+    }
+}
+
+.gallery-item.img-loading img {
+    opacity: 0 !important;
+}
+
+.gallery-item.img-loaded img {
+    opacity: 1;
+}
+
+/* Committee page custom styles */
+.committee-velvet-gradient {
+    background: linear-gradient(135deg, #ff9e40 0%, #ff6d00 100%);
+}
+
+.card-foil {
+    position: absolute;
+    font-size: 15rem;
+    line-height: 1;
+    font-family: 'Epilogue', sans-serif;
+    color: rgba(255, 255, 255, 0.02);
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    right: -2rem;
+    bottom: -4rem;
+}
+
+.member-img {
+    filter: grayscale(80%) contrast(1.2);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.member-card:hover .member-img {
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(1);
+}
+
+
+
+@media (max-width: 640px) {
+    .filter-btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.65rem;
+        flex: 0 0 calc(50% - 0.25rem);
+        text-align: center;
+        white-space: normal;
+        line-height: 1.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filter-btn:last-child:nth-child(odd) {
+        flex: 0 0 calc(70%);
+    }
+}
+
+/* Premium Google-inspired Mobile view Animations & Classes */
+@keyframes rotateAura {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes divinePulse {
+
+    0%,
+    100% {
+        transform: scale(1) translateY(0);
+        filter: drop-shadow(0 0 20px rgba(255, 109, 0, 0.35)) brightness(1);
+    }
+
+    50% {
+        transform: scale(1.03) translateY(-6px);
+        filter: drop-shadow(0 0 35px rgba(255, 109, 0, 0.6)) brightness(1.15);
+    }
+}
+
+@keyframes floatAmbient1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(25px, -35px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 25px) scale(0.9);
+    }
+}
+
+@keyframes floatAmbient2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-35px, 20px) scale(1.15);
+    }
+}
+
+@keyframes revealText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mobileLinkIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmerEffect {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-aura {
+    animation: rotateAura 45s linear infinite;
+    transform-origin: center;
+}
+
+.animate-divine {
+    animation: divinePulse 5s ease-in-out infinite;
+    will-change: transform, filter;
+}
+
+.animate-ambient-1 {
+    animation: floatAmbient1 15s ease-in-out infinite;
+}
+
+.animate-ambient-2 {
+    animation: floatAmbient2 18s ease-in-out infinite;
+}
+
+.reveal-text {
+    opacity: 0;
+    animation: revealText 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.reveal-delay-1 {
+    animation-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+    animation-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+    animation-delay: 0.45s;
+}
+
+.reveal-delay-4 {
+    animation-delay: 0.6s;
+}
+
+.mobile-link-enter {
+    opacity: 0;
+    animation: mobileLinkIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.btn-pill-glow {
+    border-radius: 9999px !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(0, 0, 0, 0.65);
+    border: 2.5px solid #ff6d00;
+    box-shadow: 0 0 25px rgba(255, 109, 0, 0.25);
+}
+
+.btn-pill-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 109, 0, 0.25), transparent);
+    transform: translateX(-100%);
+}
+
+.btn-pill-glow:hover::before {
+    animation: shimmerEffect 1.2s ease-out;
+}
+
+.btn-pill-glow:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 35px rgba(255, 109, 0, 0.65);
+    background: #ff6d00;
+}
+
+/* Custom rounded corners override for actual circles */
+.circle-badge {
+    border-radius: 9999px !important;
+}
+
+/* More Google UI / Dynamic Altar animations */
+@keyframes rippleAura {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(2.6);
+        opacity: 0;
+    }
+}
+
+@keyframes slideLight {
+    0% {
+        top: 0%;
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0) scale(0.8);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0) scale(1.2);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0) scale(1.2);
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0) scale(0.8);
+    }
+}
+
+@keyframes floatSlow {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(15px, -20px) rotate(8deg);
+    }
+}
+
+.animate-slide-light {
+    animation: slideLight 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.animate-float-slow {
+    animation: floatSlow 8s ease-in-out infinite;
+}
+
+@keyframes titleShimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.ripple-ring {
+    position: absolute;
+    border: 1.5px solid rgba(255, 109, 0, 0.25);
+    border-radius: 9999px !important;
+    animation: rippleAura 6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+.title-shimmer {
+    background: linear-gradient(90deg, #e05c00 0%, #ff8f00 25%, #fff176 50%, #ff8f00 75%, #e05c00 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleShimmer 5s linear infinite;
+    display: inline-block;
+}
+
+/* Touch active styles to persist color on mobile */
+.touch-active,
+img.touch-active {
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+}
+
+/* ============================================================ */
+/* CINEMATIC MOBILE SPLASH SCREEN - Premium Motion Design       */
+/* Google Material Design inspired spiritual experience          */
+/* ============================================================ */
+
+/* Deep cinematic radial background for mobile hero */
+.mobile-cinematic-bg {
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(120, 40, 0, 0.35) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 50% 75%, rgba(80, 20, 0, 0.2) 0%, transparent 65%),
+        radial-gradient(ellipse 100% 100% at 50% 50%, rgba(15, 8, 2, 0.6) 0%, transparent 100%);
+    mix-blend-mode: screen;
+}
+
+/* Cinematic edge vignette for dramatic depth */
+.mobile-vignette {
+    background: radial-gradient(
+        ellipse 100% 100% at 50% 50%,
+        transparent 40%,
+        rgba(5, 2, 0, 0.3) 70%,
+        rgba(3, 1, 0, 0.65) 100%
+    );
+    pointer-events: none;
+}
+
+/* ============================================================ */
+/* ORBITING LIGHT PARTICLES                                      */
+/* ============================================================ */
+
+@keyframes orbitRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.orb-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 9999px;
+    animation: orbitRotate linear infinite;
+    pointer-events: none;
+}
+
+.orb-particle {
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 9999px;
+    background: rgba(255, 140, 0, 0.85);
+    box-shadow: 0 0 12px 4px rgba(255, 120, 0, 0.55);
+    will-change: transform;
+}
+
+/* ============================================================ */
+/* OUTER MANDALA RINGS - layered sacred geometry                 */
+/* ============================================================ */
+
+@keyframes rotateMandalaCW {
+    from { transform: translate(-50%, -50%) rotate(0deg);   }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateMandalaCC {
+    from { transform: translate(-50%, -50%) rotate(0deg);    }
+    to   { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
+/* Ring 1: outermost, very slow, fine dashes */
+.mandala-ring-outer-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 9999px;
+    border: 1px dashed rgba(255, 120, 0, 0.12);
+    box-shadow: 0 0 30px rgba(255, 80, 0, 0.06) inset, 0 0 20px rgba(255, 100, 0, 0.04);
+    animation: rotateMandalaCW 90s linear infinite;
+    will-change: transform;
+}
+
+/* Ring 2: medium, counter-clockwise, dotted */
+.mandala-ring-outer-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 150, 40, 0.1);
+    box-shadow: 0 0 25px rgba(255, 100, 0, 0.05) inset;
+    background: transparent;
+    animation: rotateMandalaCC 60s linear infinite;
+    will-change: transform;
+}
+/* Layered dashes on ring 2 via pseudo — not possible in pure div, use SVG-like border tricks */
+.mandala-ring-outer-2::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 9999px;
+    border: 0.5px dashed rgba(255, 180, 80, 0.08);
+}
+
+/* Ring 3: innermost large ring, slower CW */
+.mandala-ring-outer-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 9999px;
+    border: 1.5px dashed rgba(255, 200, 80, 0.09);
+    animation: rotateMandalaCW 45s linear infinite;
+    will-change: transform;
+}
+.mandala-ring-outer-3::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 9999px;
+    border: 0.5px solid rgba(255, 140, 30, 0.06);
+}
+
+/* ============================================================ */
+/* DIVINE CORONA - positioned absolutely centered on image      */
+/* ============================================================ */
+
+.divine-corona {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: rotateMandalaCC 120s linear infinite;
+    opacity: 0.8;
+    will-change: transform;
+    pointer-events: none;
+}
+
+/* ============================================================ */
+/* SACRED CONNECTOR - enhanced light path between image & text  */
+/* ============================================================ */
+
+.sacred-connector {
+    /* Positioned between hero image bottom and text top */
+    top: calc(50% + 60px);
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 120px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 140, 0, 0.5) 0%,
+        rgba(255, 100, 0, 0.2) 50%,
+        rgba(255, 80, 0, 0.05) 100%
+    );
+    overflow: visible;
+}
+
+.connector-spine {
+    position: absolute;
+    inset: 0;
+    background: inherit;
+}
+
+/* Diamond-shaped sacred nodes on the connector spine */
+.connector-node {
+    position: absolute;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    background: rgba(255, 120, 0, 0.25);
+    border: 1px solid rgba(255, 160, 40, 0.45);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* ============================================================ */
+/* ENHANCED GLOW PULSE for the hero Durga image                  */
+/* ============================================================ */
+
+@keyframes divinePremiumPulse {
+    0%, 100% {
+        transform: scale(1) translateY(0);
+        filter:
+            drop-shadow(0 0 25px rgba(255, 109, 0, 0.4))
+            drop-shadow(0 0 60px rgba(255, 80, 0, 0.15))
+            brightness(1);
+    }
+    50% {
+        transform: scale(1.025) translateY(-5px);
+        filter:
+            drop-shadow(0 0 45px rgba(255, 130, 0, 0.65))
+            drop-shadow(0 0 90px rgba(255, 100, 0, 0.25))
+            brightness(1.12);
+    }
+}
+
+/* Override the existing animate-divine for mobile centerpiece */
+@media (max-width: 767px) {
+    .animate-divine {
+        animation: divinePremiumPulse 5s ease-in-out infinite !important;
+    }
+}
+
+/* ============================================================ */
+/* PREMIUM GRAND RING SYSTEM — Google Developer-inspired         */
+/* Breathing scale + gentle rotation + pulse opacity            */
+/* ============================================================ */
+
+/* Breathing — scale 1.00 → 1.04 → 1.00 */
+@keyframes ringBreathe {
+    0%, 100% { transform: translate(-50%, -47%) scale(1);    opacity: 1; }
+    50%       { transform: translate(-50%, -47%) scale(1.04); opacity: 0.85; }
+}
+
+/* Breathing for counter-clockwise rings (reverse translate base) */
+@keyframes ringBreatheCCW {
+    0%, 100% { transform: translate(-50%, -47%) rotate(0deg)   scale(1);    opacity: 1; }
+    50%       { transform: translate(-50%, -47%) rotate(-5deg)  scale(1.035); opacity: 0.8; }
+}
+
+/* Gentle CW rotation + breathing combined */
+@keyframes ringSpinBreatheCW {
+    0%   { transform: translate(-50%, -47%) rotate(0deg)  scale(1);    opacity: 0.85; }
+    25%  { transform: translate(-50%, -47%) rotate(2deg)  scale(1.02); opacity: 1; }
+    50%  { transform: translate(-50%, -47%) rotate(4deg)  scale(1.04); opacity: 0.9; }
+    75%  { transform: translate(-50%, -47%) rotate(6deg)  scale(1.02); opacity: 1; }
+    100% { transform: translate(-50%, -47%) rotate(8deg)  scale(1);    opacity: 0.85; }
+}
+
+/* Gentle CCW rotation + breathing combined */
+@keyframes ringSpinBreatheCCW {
+    0%   { transform: translate(-50%, -47%) rotate(0deg)   scale(1);    opacity: 0.75; }
+    25%  { transform: translate(-50%, -47%) rotate(-2deg)  scale(1.025); opacity: 0.9; }
+    50%  { transform: translate(-50%, -47%) rotate(-5deg)  scale(1.04); opacity: 0.8; }
+    75%  { transform: translate(-50%, -47%) rotate(-7deg)  scale(1.02); opacity: 0.9; }
+    100% { transform: translate(-50%, -47%) rotate(-8deg)  scale(1);    opacity: 0.75; }
+}
+
+/* Pulse opacity — faint shimmer for inner rings */
+@keyframes ringPulseOpacity {
+    0%, 100% { opacity: 0.6; }
+    50%       { opacity: 1;   }
+}
+
+/* ---- Ring 1: outermost 310px, CW spin+breathe, 25s ---- */
+.premium-ring-1 {
+    border-radius: 9999px;
+    border: 1px dashed rgba(255, 150, 40, 0.18);
+    box-shadow:
+        0 0 40px rgba(255, 100, 0, 0.06) inset,
+        0 0 0 1px rgba(255, 180, 60, 0.04);
+    animation:
+        rotateMandalaCW 90s linear infinite,
+        ringBreathe 8s ease-in-out infinite;
+    will-change: transform, opacity;
+}
+
+/* ---- Ring 2: 278px, CCW spin+breathe, phase offset ---- */
+.premium-ring-2 {
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 170, 50, 0.14);
+    box-shadow: 0 0 30px rgba(255, 120, 0, 0.05) inset;
+    animation:
+        rotateMandalaCC 65s linear infinite,
+        ringBreathe 11s ease-in-out 1.5s infinite;
+    will-change: transform, opacity;
+}
+.premium-ring-2::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 9999px;
+    border: 0.5px dashed rgba(255, 190, 70, 0.1);
+}
+
+/* ---- Ring 3: 248px, CW, phase +3s ---- */
+.premium-ring-3 {
+    border-radius: 9999px;
+    border: 1.5px dashed rgba(255, 200, 70, 0.16);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.06) inset;
+    animation:
+        rotateMandalaCW 48s linear infinite,
+        ringBreathe 9s ease-in-out 3s infinite;
+    will-change: transform, opacity;
+}
+
+/* ---- Ring 4: 220px, CCW, tight gold, pulse opacity ---- */
+.premium-ring-4 {
+    border: 1px solid rgba(255, 180, 60, 0.2);
+    box-shadow:
+        0 0 15px rgba(255, 130, 0, 0.08) inset,
+        0 0 25px rgba(255, 100, 0, 0.04);
+    animation:
+        rotateMandalaCC 40s linear infinite,
+        ringPulseOpacity 7s ease-in-out 2s infinite;
+    will-change: transform, opacity;
+}
+.premium-ring-4::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 9999px;
+    border: 0.5px dashed rgba(255, 200, 80, 0.12);
+}
+
+/* ---- Ring 5: 190px, CW, very subtle inner shimmer ---- */
+.premium-ring-5 {
+    border: 0.5px solid rgba(255, 200, 80, 0.15);
+    box-shadow: 0 0 12px rgba(255, 140, 40, 0.1) inset;
+    animation:
+        rotateMandalaCW 32s linear infinite,
+        ringPulseOpacity 6s ease-in-out 0.5s infinite;
+    will-change: transform, opacity;
+}

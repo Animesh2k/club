@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="bn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sarad Sangha - Home</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@300;400;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="assets/js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+    <!-- TopNavBar -->
+    <header class="docked full-width top-0 sticky z-50 bg-surface/60 backdrop-blur-xl dark:bg-surface/60">
+        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-secondary border-b border-secondary pb-1 font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="about.html">About</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="gallery.html">Gallery</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="committee.html">Committee</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="menu-btn"
+                    class="md:hidden relative w-11 h-11 rounded-full border border-secondary/30 bg-secondary/10 hover:bg-secondary/20 backdrop-blur-md shadow-[0_0_15px_rgba(255,109,0,0.15)] flex items-center justify-center text-on-surface-variant hover:text-secondary hover:scale-105 active:scale-95 transition-all duration-300 z-30 group overflow-hidden"
+                    aria-label="Open menu">
+                    <span
+                        class="absolute inset-0 rounded-full border border-secondary/50 animate-ping opacity-20 group-hover:opacity-40 pointer-events-none"></span>
+                    <span class="material-symbols-outlined text-2xl relative z-10">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative h-[100svh] md:h-auto md:min-h-[100vh] flex flex-col justify-center items-center px-4 sm:px-6 md:px-12 pb-0 md:pb-16 md:py-20 overflow-hidden bg-surface-container-lowest">
+            <div class="absolute inset-0 z-0 bg-surface-container-lowest hidden md:block" id="hero-slideshow">
+                <img class="hero-slide absolute inset-0 w-full h-full object-cover object-center grayscale transition-opacity duration-[2000ms] opacity-50"
+                    src="assets/images/home/WhatsApp%20Image%202026-07-08%20at%205.14.30%20PM.jpeg" />
+                <img class="hero-slide absolute inset-0 w-full h-full object-cover object-center grayscale transition-opacity duration-[2000ms] opacity-0"
+                    src="assets/images/home/WhatsApp%20Image.jpeg" />
+                <img class="hero-slide absolute inset-0 w-full h-full object-cover object-center grayscale transition-opacity duration-[2000ms] opacity-0"
+                    src="assets/images/home/WhatsApp%20Image%202026-07-jj.jpeg" />
+                <img class="hero-slide absolute inset-0 w-full h-full object-cover object-center grayscale transition-opacity duration-[2000ms] opacity-0"
+                    src="assets/images/home/WhatsApp%20Imann.jpeg" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/20 z-10 pointer-events-none">
+                </div>
+            </div>
+
+            <script src="assets/js/slideshow.js" defer></script>
+
+            <!-- Interactive Golden Sparks (Mobile Only) -->
+            <canvas id="altar-sparks"
+                class="absolute inset-0 w-full h-full pointer-events-none z-10 md:hidden"></canvas>
+
+            <!-- ============================================================ -->
+            <!-- CINEMATIC MOBILE BACKGROUND ATMOSPHERE                        -->
+            <!-- ============================================================ -->
+
+            <!-- Deep Radial Gradient Background (Mobile Only) - Fills the dark emptiness -->
+            <div class="absolute inset-0 pointer-events-none z-0 md:hidden mobile-cinematic-bg"></div>
+
+            <!-- Ambient Organic Glowing Lights (Mobile Only) -->
+            <div
+                class="absolute top-[15%] left-[-15%] w-64 h-64 rounded-full bg-secondary/12 blur-[80px] md:hidden pointer-events-none z-0 animate-ambient-1">
+            </div>
+            <div
+                class="absolute bottom-[20%] right-[-20%] w-72 h-72 rounded-full bg-primary/8 blur-[90px] md:hidden pointer-events-none z-0 animate-ambient-2">
+            </div>
+            <!-- Extra subtle top gold bloom -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-amber-900/20 blur-[120px] md:hidden pointer-events-none z-0">
+            </div>
+
+            <!-- Cinematic vignette overlay -->
+            <div class="absolute inset-0 pointer-events-none z-5 md:hidden mobile-vignette"></div>
+
+            <!-- ============================================================ -->
+            <!-- OUTER COSMIC MANDALA RINGS (fills empty vertical space)       -->
+            <!-- ============================================================ -->
+
+            <!-- Giant slow-spinning outer ring 1 -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[47%] w-[240px] h-[240px] pointer-events-none z-1 md:hidden mandala-ring-outer-1">
+            </div>
+            <!-- Giant slow-spinning outer ring 2 -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[47%] w-[205px] h-[205px] pointer-events-none z-1 md:hidden mandala-ring-outer-2">
+            </div>
+            <!-- Giant slow-spinning outer ring 3 (reverse) -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[47%] w-[180px] h-[180px] pointer-events-none z-1 md:hidden mandala-ring-outer-3">
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- FLOATING LIGHT ORBS (orbiting particles)                      -->
+            <!-- ============================================================ -->
+            <div class="absolute top-1/2 left-1/2 pointer-events-none z-8 md:hidden"
+                style="transform: translate(-50%, -47%)">
+                <!-- Orbit track 1 -->
+                <div class="orb-orbit" style="width:192px;height:192px;animation-duration:18s;">
+                    <div class="orb-particle"
+                        style="background:rgba(255,140,0,0.9);box-shadow:0 0 12px 4px rgba(255,120,0,0.6);"></div>
+                </div>
+                <!-- Orbit track 2 (reverse, different angle) -->
+                <div class="orb-orbit"
+                    style="width:165px;height:165px;animation-duration:24s;animation-direction:reverse;">
+                    <div class="orb-particle"
+                        style="background:rgba(255,200,80,0.8);box-shadow:0 0 10px 3px rgba(255,200,60,0.5);width:4px;height:4px;">
+                    </div>
+                </div>
+                <!-- Orbit track 3 (tiny, fast) -->
+                <div class="orb-orbit" style="width:218px;height:218px;animation-duration:32s;">
+                    <div class="orb-particle"
+                        style="background:rgba(255,179,100,0.6);box-shadow:0 0 8px 2px rgba(255,150,50,0.4);width:3px;height:3px;">
+                    </div>
+                </div>
+                <!-- Orbit track 4 (slow, big) -->
+                <div class="orb-orbit"
+                    style="width:135px;height:135px;animation-duration:14s;animation-direction:reverse;">
+                    <div class="orb-particle"
+                        style="background:rgba(255,240,180,0.7);box-shadow:0 0 8px 3px rgba(255,220,100,0.45);width:3px;height:3px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- DIVINE CORONA RAYS (SVG sunburst behind the Durga image)     -->
+            <!-- ============================================================ -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 pointer-events-none z-6 md:hidden divine-corona"
+                style="top: calc(50% - 47%)">
+                <svg viewBox="0 0 400 400" width="260" height="260" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="coronaGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="rgba(255,140,0,0.18)" />
+                            <stop offset="60%" stop-color="rgba(255,100,0,0.06)" />
+                            <stop offset="100%" stop-color="rgba(255,60,0,0)" />
+                        </radialGradient>
+                    </defs>
+                    <g transform="translate(200,200)">
+                        <!-- 16 divine light rays -->
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(22.5)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2"
+                            transform="rotate(45)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(67.5)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2"
+                            transform="rotate(90)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(112.5)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2"
+                            transform="rotate(135)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(157.5)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2"
+                            transform="rotate(180)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(202.5)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2"
+                            transform="rotate(225)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(247.5)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2"
+                            transform="rotate(270)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(292.5)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.12)" stroke-width="2"
+                            transform="rotate(315)" />
+                        <line x1="0" y1="-90" x2="0" y2="-190" stroke="rgba(255,160,40,0.08)" stroke-width="6"
+                            transform="rotate(337.5)" />
+                        <!-- Central glow disc -->
+                        <circle cx="0" cy="0" r="90" fill="url(#coronaGrad)" />
+                    </g>
+                </svg>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- SACRED GEOMETRY CONNECTOR (between image and text)            -->
+            <!-- ============================================================ -->
+
+            <!-- Divine Connecting Light Path (Mobile Only) - Enhanced -->
+            <div class="absolute pointer-events-none md:hidden z-10 sacred-connector">
+                <!-- Main spine line -->
+                <div class="connector-spine"></div>
+                <!-- Glowing pulsing dot sliding down this path infinitely -->
+                <div
+                    class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_14px_4px_rgba(255,109,0,0.7)] absolute left-1/2 -translate-x-1/2 animate-slide-light circle-badge">
+                </div>
+                <!-- Subtle diamond nodes along the path -->
+                <div class="connector-node" style="top: 20%;"></div>
+                <div class="connector-node" style="top: 50%;"></div>
+                <div class="connector-node" style="top: 80%;"></div>
+            </div>
+
+            <!-- Central Background Sacred Mandala (Foil Watermark, Mobile Only) -->
+            <div
+                class="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] pointer-events-none z-0 opacity-[0.06] md:hidden animate-aura circle-badge">
+                <svg class="w-full h-full text-secondary" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                    <circle cx="50" cy="50" r="48" stroke-width="0.15" stroke-dasharray="1, 2" />
+                    <circle cx="50" cy="50" r="40" stroke-width="0.25" />
+                    <circle cx="50" cy="50" r="30" stroke-width="0.15" stroke-dasharray="2, 2" />
+                    <circle cx="50" cy="50" r="20" stroke-width="0.1" stroke-dasharray="1, 3" />
+                    <line x1="50" y1="2" x2="50" y2="98" stroke-width="0.08" />
+                    <line x1="2" y1="50" x2="98" y2="50" stroke-width="0.08" />
+                    <line x1="16" y1="16" x2="84" y2="84" stroke-width="0.08" />
+                    <line x1="84" y1="16" x2="16" y2="84" stroke-width="0.08" />
+                    <polygon points="50,15 60,35 85,35 65,50 75,75 50,60 25,75 35,50 15,35 40,35" stroke-width="0.15"
+                        stroke-dasharray="1, 1" />
+                </svg>
+            </div>
+
+
+            <!-- Desktop-only hero content -->
+            <div class="relative z-20 max-w-7xl mx-auto w-full hidden md:flex flex-col items-center text-center px-2">
+                <!-- Bengali subtitle -->
+                <p
+                    class="font-headline text-white/90 text-xs sm:text-lg md:text-2xl tracking-[0.05em] sm:tracking-[0.2em] mb-2 sm:mb-6 uppercase font-medium drop-shadow-lg">
+                    সৃজনে, উদ্ভাবনে ও উদযাপনে এক আবেগময় পথচলা ..
+                </p>
+
+                <!-- Bengali Main Title -->
+                <h1 style="font-family: 'Baloo Da 2', cursive;"
+                    class="text-[clamp(2rem,10vw,8rem)] font-extrabold text-[#e05c00] leading-[1.1] mb-3 sm:mb-8 drop-shadow-[0_4px_20px_rgba(224,92,0,0.6)]">
+                    শারদ সংঘ
+                </h1>
+
+                <!-- Divider + English name + Est. -->
+                <div class="flex flex-col items-center w-full">
+                    <div
+                        class="h-[2px] w-16 sm:w-32 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80 mb-3 sm:mb-8">
+                    </div>
+                    <p
+                        class="font-headline text-sm sm:text-3xl md:text-5xl text-white tracking-[0.1em] sm:tracking-[0.15em] uppercase font-bold mb-4 sm:mb-8 drop-shadow-xl text-balance">
+                        Byabattarhat Sarad Sangha
+                    </p>
+                    <div
+                        class="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full border border-secondary/30 bg-secondary/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,109,0,0.2)]">
+                        <span class="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-secondary animate-pulse"></span>
+                        <p
+                            class="font-label text-secondary uppercase tracking-[0.2em] sm:tracking-[0.5em] text-[10px] sm:text-sm font-black">
+                            Est. 1986
+                        </p>
+                        <span class="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-secondary animate-pulse"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- MOBILE-ONLY HERO CONTENT (Redesigned - no more gap-52 void)  -->
+            <!-- ============================================================ -->
+            <div
+                class="relative z-25 max-w-7xl mx-auto w-full flex-1 flex md:hidden flex-col items-center justify-center text-center px-4 pt-10 pb-16">
+
+                <!-- Divine Altar Visual Centerpiece (Mobile Only, Normal Flow) -->
+                <div id="hero-centerpiece"
+                    class="relative w-full h-[180px] flex items-center justify-center pointer-events-none z-20 mb-0">
+
+                    <!-- Enhanced ripple rings with glow -->
+                    <div class="ripple-ring w-[112px] h-[112px]" style="border-color:rgba(255,120,0,0.3);"></div>
+                    <div class="ripple-ring w-[130px] h-[130px]"
+                        style="animation-delay: 2s;border-color:rgba(255,140,0,0.2);"></div>
+                    <div class="ripple-ring w-[150px] h-[150px]"
+                        style="animation-delay: 4s;border-color:rgba(255,160,40,0.15);"></div>
+
+                    <!-- Rotating Divine Aura mandala -->
+                    <div id="hero-aura"
+                        class="absolute rounded-full flex items-center justify-center animate-aura opacity-75 circle-badge transition-transform duration-300 ease-out"
+                        style="width:230px;height:230px;border:1px solid rgba(255,150,40,0.22);">
+                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="48" stroke="rgba(255,160,50,0.5)" stroke-width="0.6"
+                                stroke-dasharray="2,2" />
+                            <circle cx="50" cy="50" r="43" stroke="rgba(255,180,60,0.35)" stroke-width="0.9"
+                                stroke-dasharray="4,4" />
+                            <circle cx="50" cy="50" r="37" stroke="rgba(255,150,40,0.4)" stroke-width="0.6"
+                                stroke-dasharray="1,3" />
+                            <circle cx="50" cy="50" r="30" stroke="rgba(255,140,30,0.25)" stroke-width="0.4"
+                                stroke-dasharray="2,4" />
+                            <path
+                                d="M50 2 L50 12 M50 88 L50 98 M2 50 L12 50 M88 50 L98 50 M16 16 L24 24 M76 76 L84 84 M84 16 L76 24 M24 76 L16 84"
+                                stroke="rgba(255,160,50,0.45)" stroke-width="0.7" />
+                            <path d="M50 4 L50 9 M50 91 L50 96 M4 50 L9 50 M91 50 L96 50" stroke="rgba(255,200,80,0.5)"
+                                stroke-width="1" />
+                        </svg>
+                    </div>
+
+                    <!-- Counter-rotating inner ring — subtle shimmer -->
+                    <div class="absolute rounded-full circle-badge pointer-events-none"
+                        style="width:195px;height:195px;animation:rotateAura 35s linear infinite reverse;opacity:0.45;border:1px dashed rgba(255,190,70,0.32);">
+                    </div>
+
+                    <!-- Maa Durga Medallion — centered, increased to 185px -->
+                    <div id="hero-durga-wrap"
+                        class="relative rounded-full border-2 border-amber-400/55 bg-secondary/5 flex items-center justify-center circle-badge overflow-hidden animate-divine transition-transform duration-300 ease-out z-20"
+                        style="width:185px;height:185px;box-shadow:0 0 50px rgba(255,120,0,0.4),0 0 100px rgba(255,80,0,0.18),0 0 160px rgba(200,60,0,0.08),inset 0 0 25px rgba(255,120,0,0.12);">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-secondary/15 to-primary/8 rounded-full circle-badge z-0">
+                        </div>
+                        <!-- Subtle inner rim glow -->
+                        <div class="absolute inset-0 rounded-full circle-badge z-30"
+                            style="box-shadow: inset 0 0 20px rgba(255,140,0,0.2), inset 0 0 6px rgba(255,200,80,0.15);">
+                        </div>
+                        <!-- The home_rounded image -->
+                        <img id="hero-bg-img" src="assets/images/home/home_rounded.png" alt="Home Altar Pandal"
+                            class="absolute top-0 left-0 w-full h-full object-cover circle-badge z-10 transition-transform duration-300 ease-out" />
+                    </div>
+                </div>
+
+
+
+                <!-- Text Wrapper (Mobile Only, Normal Flow) -->
+                <div class="w-full flex flex-col items-center justify-center text-center z-10 mt-20">
+                    <!-- Bengali subtitle -->
+                    <p
+                        class="reveal-text reveal-delay-1 font-headline text-white/90 text-xs min-[360px]:text-sm tracking-[0.05em] mb-3 font-semibold drop-shadow-md">
+                        সৃজনে, উদ্ভাবনে ও উদযাপনে এক আবেগময় পথচলা ..
+                    </p>
+
+                    <!-- Bengali Main Title (Premium gold/orange shifting shimmer) -->
+                    <div class="reveal-text reveal-delay-2 mb-3">
+                        <h1 style="font-family: 'Baloo Da 2', cursive;"
+                            class="text-4xl min-[360px]:text-5xl font-black leading-none title-shimmer drop-shadow-[0_2px_20px_rgba(255,109,0,0.5)]">
+                            শারদ সংঘ
+                        </h1>
+                    </div>
+
+                    <!-- Divider line matching desktop style -->
+                    <div
+                        class="reveal-text reveal-delay-3 h-[1.5px] w-28 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-90 mt-1 mb-3">
+                    </div>
+
+                    <!-- English name -->
+                    <p
+                        class="reveal-text reveal-delay-3 font-headline text-xs text-white/85 tracking-[0.12em] font-bold mb-4 drop-shadow-xl uppercase">
+                        Byabattarhat Sarad Sangha
+                    </p>
+
+                    <!-- Est. 1986 Badge matching desktop format -->
+                    <div
+                        class="reveal-text reveal-delay-4 inline-flex items-center gap-2 px-5 py-1.5 rounded-full border border-secondary/40 bg-secondary/10 backdrop-blur-md shadow-[0_0_20px_rgba(255,109,0,0.25),0_0_40px_rgba(255,80,0,0.1)] circle-badge">
+                        <span class="w-1.5 h-1.5 circle-badge bg-secondary animate-pulse"></span>
+                        <p class="font-label text-secondary uppercase tracking-[0.3em] text-[10px] font-black">
+                            Est. 1986
+                        </p>
+                        <span class="w-1.5 h-1.5 circle-badge bg-secondary animate-pulse"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div
+                class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center animate-bounce">
+                <span class="material-symbols-outlined text-secondary opacity-80">keyboard_arrow_down</span>
+            </div>
+        </section>
+        <!-- Heritage Section -->
+        <section id="heritage-section"
+            class="relative mb-[50px] py-28 md:py-32 px-6 md:px-12 bg-surface overflow-hidden">
+            <div
+                class="absolute -bottom-24 -left-24 md:-bottom-20 md:-left-20 w-48 h-48 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-primary/10 to-transparent border border-primary/20 backdrop-blur-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] z-0">
+            </div>
+            <div
+                class="absolute -top-10 -right-10 md:top-10 md:right-10 w-32 h-32 md:w-64 md:h-64 rounded-3xl bg-gradient-to-br from-white/10 to-transparent border border-white/20 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(255,179,172,0.1)] z-0">
+            </div>
+            <div class="heritage-foil -left-4 md:-left-20 top-0 opacity-50 md:opacity-100 z-0">4</div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 relative z-10">
+                <div
+                    class="self-center md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 text-center flex flex-col items-center">
+                    <p class="font-headline text-secondary text-xl sm:text-2xl md:text-3xl tracking-widest mb-4">দুর্গা
+                        অন্তপ্রাণ..</p>
+                    <h2
+                        class="font-headline text-4xl sm:text-5xl md:text-6xl tracking-tighter mb-8 md:mb-12 leading-[1.1] text-balance">
+                        Celebrating Durga Puja for the Past Four Decades
+                    </h2>
+                    <p class="text-on-surface-variant text-base sm:text-lg max-w-xl mb-10 md:mb-12 text-balance">
+                        For Four decades, our sangha has been the beating heart of Byabattarhat's cultural identity,
+                        weaving together tradition and modern artistic expression.
+                    </p>
+                    <div class="flex items-center gap-4 justify-center">
+                        <span class="hidden md:inline-block w-12 h-[1px] bg-outline-variant"></span>
+                        <span class="font-label text-xs sm:text-sm uppercase tracking-[0.2em] text-secondary">The
+                            Heritage Legacy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Commitment Header -->
+        <section class="py-24 px-6 md:px-12 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="inline-block mb-12 sm:mb-20 px-8 py-3 rounded-full bg-secondary/10 border border-secondary/30 shadow-[0_0_20px_rgba(255,109,0,0.3)]">
+                        <p class="font-label text-secondary uppercase tracking-[0.4em] text-sm md:text-xl">Our
+                            Commitment</p>
+                    </div>
+                    <h2
+                        class="font-headline text-2xl sm:text-3xl md:text-5xl lg:text-8xl leading-tight font-extrabold tracking-tighter text-on-surface/10 uppercase text-balance w-full px-4">
+                        Community &amp; Social Services
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <!-- Service Section (Blood Donation) -->
+        <section class="py-16 md:py-32 px-6 md:px-12 bg-surface">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+                <div class="aspect-square bg-surface-container-lowest overflow-hidden rounded-xl">
+                    <img id="blood-bag-img"
+                        class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 hover:scale-105 transition-all duration-700 cursor-pointer select-none"
+                        draggable="false"
+                        data-alt="Close up of a blood donation bag with crimson red liquid and artistic surgical lighting against a dark background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv1VN0RwErLotT5ux-taUzMqponoYz3sSuWTLqgdpB_9J3mfXuzE5i8McLCINbFCjHQklT2DmBLeh9K6Q6oWSyoNtKu7D3z5t4tIrtaP_iyWgTaMCskFYlNglv0duiCOP3NV7O8-tj3XfU9jhlT_QwzOGt5DAdsaapIA6PhVvOVX7uy8mU83Z2k92dmZEDamFc-zMkJD1n0L-8PrkLYqxooUG3qMFCILo_sLAXQdqZL6ftznncswMbT--9d8M2E2VYKsGP2N0IEKuL" />
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-headline text-3xl md:text-5xl tracking-tighter mb-6 md:mb-8 text-balance">Annual
+                        Blood Donation Camp</h3>
+                    <p class="text-on-surface-variant text-base md:text-lg mb-8 md:mb-10 leading-relaxed text-balance">
+                        In times of crisis, every drop matters. Our annual camp serves as a vital lifeline for local
+                        medical facilities, bringing together hundreds of donors in a mission of shared humanity.
+                    </p>
+                    <a href="services/blood_donor.html"
+                        class="bg-secondary shadow-[0_0_20px_rgba(255,109,0,0.4)] px-8 py-5 text-white font-label font-bold uppercase tracking-widest text-sm rounded-lg hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-3">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">emergency</span>
+                        Emergency Contact
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Services Grid -->
+        <section class="py-32 px-6 md:px-12 bg-surface-container-lowest">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+                    <!-- Card 1 -->
+                    <a href="services/ambulance_contact.html" class="block group">
+                        <div
+                            class="bg-surface-container-high p-12 min-h-[400px] h-full flex flex-col justify-between cursor-pointer transition-colors duration-500 hover:bg-surface-container-highest">
+                            <div>
+                                <div
+                                    class="aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container-lowest border border-white/5 shadow-2xl relative">
+                                    <img class="w-full h-full object-cover opacity-60 grayscale brightness-75 contrast-125 group-hover:scale-105 transition-all duration-700"
+                                        data-alt="Dramatic high-contrast night shot of an ambulance with red siren lights casting deep shadows on a dark street, cinematic film grain"
+                                        src="assets/images/about/home/abbules_pic.jpeg" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent">
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary text-4xl mb-4">ambulance</span>
+                                <h4 class="font-headline text-3xl tracking-tight mb-4 text-white">Emergency Ambulance
+                                </h4>
+                                <p class="text-on-surface-variant">24/7 Rapid response medical transportation for the
+                                    community.</p>
+                            </div>
+                            <div class="flex justify-center mt-6">
+                                <div
+                                    class="inline-flex items-center justify-center px-12 py-4 rounded-lg bg-secondary text-white font-label text-xs uppercase tracking-widest transition-all duration-300 w-full hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,109,0,0.3)]">
+                                    Learn More
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="programs/cultural_program.html" class="block group">
+                        <div
+                            class="bg-surface-container-high p-12 min-h-[400px] h-full flex flex-col justify-between group cursor-pointer transition-colors duration-500 hover:bg-surface-container-highest">
+                            <div>
+                                <div
+                                    class="aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container-lowest border border-white/5 shadow-2xl relative">
+                                    <img class="w-full h-full object-cover opacity-60 grayscale brightness-75 contrast-125"
+                                        data-alt="Macro shot of a stethoscope and medical equipment under dramatic, focused spotlight with heavy shadows, high contrast digital altar aesthetic"
+                                        src="assets/images/home/cultural_program.jpeg" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent">
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary text-4xl mb-4">festival</span>
+                                <h4 class="font-headline text-3xl tracking-tight mb-4">Cultural Programs</h4>
+                                <p class="text-on-surface-variant">Celebrating our rich heritage through vibrant
+                                    cultural
+                                    events and festivals that bring the community together in joy and devotion.</p>
+                            </div>
+                            <div class="flex justify-center mt-6">
+                                <div
+                                    class="inline-flex items-center justify-center px-12 py-4 rounded-lg bg-secondary text-white font-label text-xs uppercase tracking-widest transition-all duration-300 w-full hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,109,0,0.3)]">
+                                    Learn More
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="programs/anno_seva.html" class="block group">
+                        <div
+                            class="bg-surface-container-high p-12 min-h-[400px] h-full flex flex-col justify-between cursor-pointer transition-colors duration-500 hover:bg-surface-container-highest">
+                            <div>
+                                <div
+                                    class="aspect-square mb-8 overflow-hidden rounded-lg bg-surface-container-lowest border border-white/5 shadow-2xl relative">
+                                    <img class="w-full h-full object-cover opacity-60 grayscale brightness-75 contrast-125 group-hover:scale-105 transition-all duration-700"
+                                        data-alt="Daily food distribution and communal feasts during Durga Puja"
+                                        src="assets/images/anno seva.jpeg" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent">
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary text-4xl mb-4">soup_kitchen</span>
+                                <h4 class="font-headline text-3xl tracking-tight mb-4 text-white">Anno Seva</h4>
+                                <p class="text-on-surface-variant">Daily food distribution and communal feasts serving
+                                    the
+                                    community during festive days.</p>
+                            </div>
+                            <div class="flex justify-center mt-6">
+                                <div
+                                    class="inline-flex items-center justify-center px-12 py-4 rounded-lg bg-secondary text-white font-label text-xs uppercase tracking-widest transition-all duration-300 w-full hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,109,0,0.3)]">
+                                    Learn More
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Strip Overlay -->
+        <section class="relative min-h-[400px] md:h-[614px] flex items-center justify-center overflow-hidden">
+            <img class="absolute inset-0 w-full h-full object-cover"
+                data-alt="A cinematic editorial wide shot of a massive crowd visiting a magnificent Durga Puja pandal at night with dramatic lighting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEet7cqFw5EU_Agw9s9vcpRCblW9LS4_gOt7MQeMe6-Rcy_M5URBQH7GNX1LDyu6b1dgGrTSOgfR1VKBLxyHAzmbrw0sBD0kzHQ43bS5T3eE9QBxJ5MeRZxLQ-XItXVAmKjs9t1wEv1f3Ed9Wp7BWycXVzO7SFAF09QaJLf2WgzYZc1kFWfz3ArBMf4GMlMZbLQV13ttnGI5Nh8Un9x40UkyRfaCAnK8lEzFGNFiRNpo1D7Vtgyd5o8uGcKHUgHJyA4IbfmNJzwzA3" />
+            <div class="absolute inset-0 bg-surface/80 backdrop-blur-[2px]"></div>
+            <div class="relative z-10 text-center px-4 w-full">
+                <p class="font-headline text-secondary text-2xl md:text-4xl tracking-widest mb-6">দুর্গা,আমরা আর
+                    আপনারা..</p>
+                <h2
+                    class="font-headline text-3xl md:text-3xl lg:text-5xl font-black tracking-tighter text-white uppercase leading-tight">
+                    5K+ Puja Premi and Pujo Paglos<br />
+                    Come to our Puja Pandal every year
+                </h2>
+            </div>
+        </section>
+        <!-- Map & Contact -->
+        <section class="py-32 px-6 md:px-12 bg-surface">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div class="space-y-12">
+                    <h2 class="font-headline text-5xl tracking-tighter">Visit the Altar</h2>
+                    <div class="aspect-video bg-surface-container-low overflow-hidden">
+                        <iframe class="w-full h-full border-0"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25262.96590782149!2d87.9266968698405!3d22.25782086478546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0294a254625a05%3A0xf2600b16b69bee2!2z4Ka24Ka-4Kaw4KamIOCmuOCmguCmmA!5e0!3m2!1sen!2sin!4v1787472994474!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                    <div
+                        class="grid grid-cols-2 gap-8 font-label text-sm uppercase tracking-widest text-on-surface-variant">
+                        <div>
+                            <p class="text-secondary mb-2">Location</p>
+                            <p>Byabattarhat, Nandakumar,<br />Purba Medinipur, WB, Pin-721648</p>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Info Section -->
+                <div class="bg-surface-container-lowest p-10 md:p-16 flex flex-col justify-between">
+                    <div class="space-y-12">
+                        <div>
+                            <p class="font-label text-xs uppercase tracking-[0.4em] text-secondary mb-4">The Sangha</p>
+                            <h3 class="font-headline text-3xl md:text-4xl tracking-tighter font-bold text-white">
+                                Byabattarhat<br />Sarad Sangha
+                            </h3>
+                        </div>
+                        <div>
+                            <p class="font-label text-xs uppercase tracking-[0.4em] text-on-surface-variant/40 mb-3">
+                                Direct Line</p>
+                            <p class="font-headline text-3xl md:text-4xl tracking-tighter font-bold text-on-surface">
+                                +91 98765 43210</p>
+                        </div>
+                        <div>
+                            <p class="font-label text-xs uppercase tracking-[0.4em] text-on-surface-variant/40 mb-3">
+                                Electronic Mail</p>
+                            <p
+                                class="font-headline text-[15px] sm:text-xl md:text-3xl tracking-tighter font-bold text-secondary uppercase whitespace-nowrap">
+                                CONTACT@SARADSANGHA.IN</p>
+                        </div>
+                    </div>
+                    <div class="pt-8 mt-12 border-t border-white/5">
+                        <p class="font-body text-sm text-on-surface-variant leading-relaxed max-w-sm">
+                            Reach out for emergency services, donations, or membership inquiries. Our doors are
+                            always open for the community.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="w-full py-12 px-8 border-t border-white/5 bg-surface-container-lowest dark:bg-surface-container-lowest">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div
+                class="flex flex-wrap justify-center gap-8 font-label text-body-sm tracking-wide text-on-surface-variant">
+                <a class="hover:text-secondary transition-all duration-300"
+                    href="services/emergency_services.html">Emergency
+                    Services</a>
+                <a class="hover:text-secondary transition-all duration-300" href="legal/privacy_policy.html">Privacy
+                    Policy</a>
+                <a class="hover:text-secondary transition-all duration-300" href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="font-body text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/40">
+                © 2024 Byabattarhat Sarad Sangha. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/altar-effects.js" defer></script>
+</body>
+
+</html>

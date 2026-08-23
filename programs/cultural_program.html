@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="dark" lang="bn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cultural Program - Sarad Sangha</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@300;400;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <script src="../assets/js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+    <!-- TopNavBar -->
+    <header
+        class="docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/5">
+        <nav class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="../assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="../index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="../about.html">About</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="../gallery.html">Gallery</a>
+                <a class="text-on-surface-variant hover:text-secondary font-headline tracking-tighter text-label-md font-label uppercase transition-colors duration-300"
+                    href="../committee.html">Committee</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="menu-btn" class="md:hidden relative w-11 h-11 rounded-full border border-secondary/30 bg-secondary/10 hover:bg-secondary/20 backdrop-blur-md shadow-[0_0_15px_rgba(255,109,0,0.15)] flex items-center justify-center text-on-surface-variant hover:text-secondary hover:scale-105 active:scale-95 transition-all duration-300 z-30 group overflow-hidden" aria-label="Open menu">
+                    <span class="absolute inset-0 rounded-full border border-secondary/50 animate-ping opacity-20 group-hover:opacity-40 pointer-events-none"></span>
+                    <span class="material-symbols-outlined text-2xl relative z-10">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero / Content Section -->
+        <section class="pt-40 pb-20 px-6 md:px-12 bg-surface relative overflow-hidden min-h-[50vh] flex items-center">
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none">
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto relative z-10 w-full text-center">
+                <span class="material-symbols-outlined text-6xl text-secondary mb-4"
+                    style="font-variation-settings: 'FILL' 1;">festival</span>
+                <h1
+                    class="font-headline text-4xl md:text-6xl font-black tracking-tighter text-on-surface mb-6 uppercase">
+                    Cultural <span class="text-secondary">Programs</span>
+                </h1>
+                <p class="font-label text-secondary uppercase tracking-[0.2em] mb-4 text-sm md:text-base">
+                    সাংস্কৃতিক উৎসব ও ঐতিহ্য
+                </p>
+                <p class="text-on-surface-variant text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                    Celebrating community spirit, artistic expression, and local talent. Experience the vibrant moments
+                    of dance, drama, and music performed during the festive season of Durga Puja at Byabattarhat Sarad
+                    Sangha.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-16 px-6 md:px-12 bg-surface-container-lowest">
+            <div class="max-w-7xl mx-auto">
+                <!-- Using the standard gallery-grid layout for a premium masonry visual flow -->
+                <div class="gallery-grid w-full" id="galleryGrid">
+                    <!-- Image Card 1 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.49.59 PM.jpeg"
+                            alt="Traditional Bengali dance performance" loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 2 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.33.24 PM (1).jpeg"
+                            alt="Live musical program on stage" loading="lazy" />
+                        <div class="item-overlay">
+
+                        </div>
+                    </div>
+
+                    <!-- Image Card 3 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.33.25 PM (1).jpeg"
+                            alt="Stage drama play presentation" loading="lazy" />
+                        <div class="item-overlay">
+
+                        </div>
+                    </div>
+
+                    <!-- Image Card 4 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.33.25 PM.jpeg"
+                            alt="Artists performing traditional songs" loading="lazy" />
+                        <div class="item-overlay">
+
+                        </div>
+                    </div>
+
+                    <!-- Image Card 5 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.33.26 PM (1).jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 6 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.33.26 PM.jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 7 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.34.44 PM.jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 8 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.35.33 PM.jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 9 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.48.35 PM (1).jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 10 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.48.35 PM.jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 11 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.49.23 PM (1).jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 12 -->
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.49.23 PM (2).jpeg"
+                            loading="lazy" />
+
+                    </div>
+
+                    <!-- Image Card 13 -->
+                    <!-- <div class="gallery-item" data-category="cultural">
+                        <img src="../assets/images/home/cultural_program/WhatsApp Image 2026-07-10 at 8.49.23 PM.jpeg"
+                            loading="lazy" />
+
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Lightbox Modal (Linked to lightbox.js) -->
+    <div id="lightboxModal"
+        class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/90 backdrop-blur-[20px] transition-all duration-300 opacity-0">
+        <!-- Close Button -->
+        <button id="lightboxClose"
+            class="absolute top-4 right-4 md:top-6 md:right-6 text-on-surface-variant hover:text-primary transition-colors duration-300 z-10 bg-white/5 p-2.5 md:p-3 rounded-full hover:bg-white/10 flex items-center justify-center"
+            aria-label="Close lightbox">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <!-- Navigation Buttons -->
+        <button id="lightboxPrev"
+            class="absolute left-2 md:left-6 text-on-surface-variant hover:text-primary transition-colors duration-300 z-10 bg-white/5 p-2.5 md:p-4 rounded-full hover:bg-white/10 flex items-center justify-center"
+            aria-label="Previous image">
+            <span class="material-symbols-outlined text-4xl">chevron_left</span>
+        </button>
+        <button id="lightboxNext"
+            class="absolute right-2 md:right-6 text-on-surface-variant hover:text-primary transition-colors duration-300 z-10 bg-white/5 p-2.5 md:p-4 rounded-full hover:bg-white/10 flex items-center justify-center"
+            aria-label="Next image">
+            <span class="material-symbols-outlined text-4xl">chevron_right</span>
+        </button>
+
+        <!-- Image & Caption Container -->
+        <div class="max-w-5xl w-full px-6 flex flex-col items-center gap-4 relative">
+            <img id="lightboxImage" src="" alt=""
+                class="max-h-[75vh] max-w-full object-contain shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] transform scale-95 transition-all duration-300 ease-out" />
+            <div id="lightboxCaption" class="text-center mt-4 max-w-2xl">
+                <span id="lightboxCategory" class="category-tag mb-2 inline-block">Category</span>
+                <h3 id="lightboxTitle" class="font-headline text-2xl md:text-3xl text-on-surface font-black">Title</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        class="w-full py-12 px-8 border-t border-white/5 bg-surface-container-lowest dark:bg-surface-container-lowest mt-12">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <div
+                    class="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(255,179,172,0.5)] animate-[pulse_3s_ease-in-out_infinite] group-hover:scale-110 transition-all duration-500">
+                    <img src="../assets/images/logo.jpeg" alt="Logo"
+                        class="w-full h-full object-cover group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div class="flex flex-col justify-center items-center text-center mt-1">
+                    <span
+                        class="text-xl md:text-2xl font-headline font-black tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[size:200%_auto] animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,179,172,0.6)] leading-none">Sarad
+                        Sangha</span>
+                </div>
+            </a>
+            <div
+                class="flex flex-wrap justify-center gap-8 font-label text-body-sm tracking-wide text-on-surface-variant">
+                <a class="hover:text-secondary transition-all duration-300"
+                    href="../services/emergency_services.html">Emergency Services</a>
+                <a class="hover:text-secondary transition-all duration-300" href="../legal/privacy_policy.html">Privacy
+                    Policy</a>
+                <a class="hover:text-secondary transition-all duration-300" href="../contact_us.html">Contact Us</a>
+            </div>
+            <div class="font-body text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/40">
+                © 2024 Byabattarhat Sarad Sangha. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Standard Lightbox Script -->
+    <script src="../assets/js/lightbox.js" defer></script>
+</body>
+
+</html>
