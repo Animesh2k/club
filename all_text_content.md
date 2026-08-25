@@ -41,7 +41,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: INDEX.HTML
-- 📄 **Page Title**: `Sarad Sangha - Home`
+- 📄 **Page Title**: `Sharad Sangha - Home`
 - 🔗 **Source File**: `[index.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/index.html)`
 
 ### Headings
@@ -59,10 +59,10 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `সৃজনে উদ্ভাবনে আর এক আবেগময় পথচলা -`
-- `Byabattarhat Sarad Sangha`
+- `Byabattarhat Sharad Sangha`
 - `Est. 1948`
 - `সৃজনে উদ্ভাবনে আর এক আবেগময় পথচলা -`
-- `Byabattarhat Sarad Sangha`
+- `Byabattarhat Sharad Sangha`
 - `Est. 1948`
 - `দুর্গা অন্ত প্রাণ....`
 - `For eighty years, our sangha has been the beating heart of Byabattarhat's cultural identity, weaving together tradition and modern artistic expression.`
@@ -93,12 +93,12 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 - `soup\_kitchen`
 - `Come to our Puja Pandal every year`
 - `Purba Medinipur, WB`
-- `Sarad Sangha`
+- `Sharad Sangha`
 
 ---
 
 ## PAGE: ABOUT.HTML
-- 📄 **Page Title**: `About Us - Sarad Sangha`
+- 📄 **Page Title**: `About Us - Sharad Sangha`
 - 🔗 **Source File**: `[about.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/about.html)`
 
 ### Headings
@@ -133,7 +133,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `Since 1948`
-- `For eight decades, Byabattarhat Sarad Sangha has stood as a beacon of cultural heritage, community service, and spiritual celebration in the heart of Purba Medinipur.`
+- `For eight decades, Byabattarhat Sharad Sangha has stood as a beacon of cultural heritage, community service, and spiritual celebration in the heart of Purba Medinipur.`
 - `Voices of Inspiration`
 - `"Sharad Sangh is not just a name or an organization. It is an emotion for us. Every part of it is filled with devotion for the Maa Durga."`
 - `"Our annual Durga Puja is not just a festival; it is a sacred bond that unites hearts and souls. I am immensely proud of our team's relentless effort in making our Sangha a warm, welcoming home for all devotees and a center of local cultural excellence."`
@@ -175,7 +175,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: COMMITTEE.HTML
-- 📄 **Page Title**: `Committee - Sarad Sangha`
+- 📄 **Page Title**: `Committee - Sharad Sangha`
 - 🔗 **Source File**: `[committee.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/committee.html)`
 
 ### Headings
@@ -237,12 +237,12 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: CONTACT_US.HTML
-- 📄 **Page Title**: `Contact Us - Sarad Sangha`
+- 📄 **Page Title**: `Contact Us - Sharad Sangha`
 - 🔗 **Source File**: `[contact_us.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/contact_us.html)`
 
 ### Headings
 - **H1**: `Contact`
-- **H3**: `Byabattarhat Sarad Sangha`
+- **H3**: `Byabattarhat Sharad Sangha`
 - **H3**: `Byabattarhat,`
 - **H3**: `Send a Message`
 
@@ -271,7 +271,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: GALLERY.HTML
-- 📄 **Page Title**: `Gallery - Sarad Sangha`
+- 📄 **Page Title**: `Gallery - Sharad Sangha`
 - 🔗 **Source File**: `[gallery.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/gallery.html)`
 
 ### Headings
@@ -291,7 +291,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `Visual Journey`
-- `A visual archive of 80 years of devotion, artistic excellence, and vibrant community celebrations at Byabattarhat Sarad Sangha.`
+- `A visual archive of 80 years of devotion, artistic excellence, and vibrant community celebrations at Byabattarhat Sharad Sangha.`
 
 ### Micro-copy Labels & Metadata
 - `Heritage`
@@ -310,7 +310,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: LEGAL/PRIVACY_POLICY.HTML
-- 📄 **Page Title**: `Privacy Policy - Sarad Sangha`
+- 📄 **Page Title**: `Privacy Policy - Sharad Sangha`
 - 🔗 **Source File**: `[legal\privacy_policy.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/legal/privacy_policy.html)`
 
 ### Headings
@@ -322,8 +322,8 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `Legal`
-- `We value your privacy. Learn how Byabattarhat Sarad Sangha handles and protects your data.`
-- `Welcome to the Byabattarhat Sarad Sangha website. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at CONTACT@SARADSANGHA.ORG.`
+- `We value your privacy. Learn how Byabattarhat Sharad Sangha handles and protects your data.`
+- `Welcome to the Byabattarhat Sharad Sangha website. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at CONTACT@SARADSANGHA.ORG.`
 - `We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the website, or otherwise when you contact us.`
 - `We use personal information collected via our website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations.`
 - `If you have questions or comments about this notice, you may email us at CONTACT@SARADSANGHA.ORG or by post to:`
@@ -334,14 +334,14 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 - `Names, phone numbers, email addresses, mailing addresses.`
 - `Usage Data:`
 - `We may automatically collect diagnostic, usage, and performance information when you access our website.`
-- `Byabattarhat Sarad Sangha`
+- `Byabattarhat Sharad Sangha`
 - `Byabattarhat, Purba Medinipur, WB`
 - `India`
 
 ---
 
 ## PAGE: PROGRAMS/ANNO_SEVA.HTML
-- 📄 **Page Title**: `Anno Seva - Sarad Sangha`
+- 📄 **Page Title**: `Anno Seva - Sharad Sangha`
 - 🔗 **Source File**: `[programs\anno_seva.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/programs/anno_seva.html)`
 
 ### Headings
@@ -350,7 +350,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `Daily Food Distribution & Feast`
-- `Byabattarhat Sarad Sangha's commitment to community welfare extends to nourishing the soul and body. We host daily food distribution drives and communal feasts for everyone during the festive days.`
+- `Byabattarhat Sharad Sangha's commitment to community welfare extends to nourishing the soul and body. We host daily food distribution drives and communal feasts for everyone during the festive days.`
 - `Our kitchen runs non-stop during the five days of Durga Puja, feeding over 5,000+ devotees daily with traditional, blessed meals (Prasad). Every plate is served with love, care, and devotion.`
 
 ### Micro-copy Labels & Metadata
@@ -364,7 +364,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: PROGRAMS/CULTURAL_PROGRAM.HTML
-- 📄 **Page Title**: `Cultural Program - Sarad Sangha`
+- 📄 **Page Title**: `Cultural Program - Sharad Sangha`
 - 🔗 **Source File**: `[programs\cultural_program.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/programs/cultural_program.html)`
 
 ### Headings
@@ -373,7 +373,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `সাংস্কৃতিক উৎসব ও ঐতিহ্য`
-- `Celebrating community spirit, artistic expression, and local talent. Experience the vibrant moments of dance, drama, and music performed during the festive season of Durga Puja at Byabattarhat Sarad Sangha.`
+- `Celebrating community spirit, artistic expression, and local talent. Experience the vibrant moments of dance, drama, and music performed during the festive season of Durga Puja at Byabattarhat Sharad Sangha.`
 
 ### Micro-copy Labels & Metadata
 - `festival`
@@ -386,7 +386,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: SERVICES/AMBULANCE_CONTACT.HTML
-- 📄 **Page Title**: `Emergency Ambulance - Sarad Sangha`
+- 📄 **Page Title**: `Emergency Ambulance - Sharad Sangha`
 - 🔗 **Source File**: `[services\ambulance_contact.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/services/ambulance_contact.html)`
 
 ### Headings
@@ -395,7 +395,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `Ambulance Support Contact`
-- `Byabattarhat Sarad Sangha is dedicated to serving the community in times of need. Reach out directly for 24/7 emergency ambulance support.`
+- `Byabattarhat Sharad Sangha is dedicated to serving the community in times of need. Reach out directly for 24/7 emergency ambulance support.`
 - `Direct Mobile`
 - `9734252052`
 
@@ -406,13 +406,13 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 - `emergency`
 - `24/7 Ambulance Service`
 - `Ambulance Coordinator`
-- `Emergency Rapid Response Team — Byabattarhat Sarad Sangha`
+- `Emergency Rapid Response Team — Byabattarhat Sharad Sangha`
 - `call`
 
 ---
 
 ## PAGE: SERVICES/BLOOD_DONOR.HTML
-- 📄 **Page Title**: `Emergency Blood Donor - Sarad Sangha`
+- 📄 **Page Title**: `Emergency Blood Donor - Sharad Sangha`
 - 🔗 **Source File**: `[services\blood_donor.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/services/blood_donor.html)`
 
 ### Headings
@@ -438,7 +438,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 ---
 
 ## PAGE: SERVICES/EMERGENCY_SERVICES.HTML
-- 📄 **Page Title**: `Emergency Services - Sarad Sangha`
+- 📄 **Page Title**: `Emergency Services - Sharad Sangha`
 - 🔗 **Source File**: `[services\emergency_services.html](file:///c:/Users/animeshmanna/Desktop/stitch_the_digital_altar_system/services/emergency_services.html)`
 
 ### Headings
@@ -449,7 +449,7 @@ HTML layouts are parsed below. Boilerplate tags, scripts, styles, navigation bar
 
 ### Content & Paragraphs
 - `24/7 Support`
-- `Byabattarhat Sarad Sangha is dedicated to serving the community in times of need with our round-the-clock emergency assistance programs.`
+- `Byabattarhat Sharad Sangha is dedicated to serving the community in times of need with our round-the-clock emergency assistance programs.`
 - `24/7 rapid response medical transportation for the community. Fully equipped with necessary life-support and trained personnel.`
 - `Access to a large database of verified blood donors. Connect with emergency blood donors or register yourself to save lives.`
 - `Our helpline is active 24/7 for the Byabattarhat community.`

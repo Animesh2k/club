@@ -63,12 +63,12 @@ exports.handler = async function (event, context) {
           {
             From: {
               Email: fromEmail,
-              Name: "Sarad Sangha Website Form",
+              Name: "Sharad Sangha Website Form",
             },
             To: [
               {
                 Email: toEmail,
-                Name: "Sarad Sangha Admin",
+                Name: "Sharad Sangha Admin",
               },
             ],
             Subject: `New Message from ${name} via Contact Form`,
@@ -84,7 +84,7 @@ exports.handler = async function (event, context) {
                 </div>
                 <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
                 <p style="font-size: 11px; color: #999; text-align: center; margin-bottom: 0;">
-                  This email was sent automatically from the Sarad Sangha Contact Form.
+                  This email was sent automatically from the Sharad Sangha Contact Form.
                 </p>
               </div>
             `,
